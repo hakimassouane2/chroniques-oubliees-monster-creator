@@ -1,14 +1,14 @@
 <form id="laboratory-blueprint-form" data-method="{{blueprint.method}}" data-rank="{{blueprint.description.rank}}">
 	<div class="form-group">
-		<label>Method <button type="button" class="btn btn-sm btn-help icon-only" data-toggle="modal" data-target="#modal-blueprint-help-method"><span class="fas fa-question-circle"></span></button></label>
+		<label>Méthode <button type="button" class="btn btn-sm btn-help icon-only" data-toggle="modal" data-target="#modal-blueprint-help-method"><span class="fas fa-question-circle"></span></button></label>
 		<div class="form-radio-list">
 			<div class="form-check form-check-inline">
 				<input class="form-check-input" type="radio" value="quickstart" id="blueprint-method-quickstart" name="method" {{checked blueprint.method "quickstart"}}>
-				<label class="form-check-label" for="blueprint-method-quickstart">Quickstart</label>
+				<label class="form-check-label" for="blueprint-method-quickstart">Rapide</label>
 			</div>
 			<div class="form-check form-check-inline">
 				<input class="form-check-input" type="radio" value="manual" id="blueprint-method-manual" name="method" {{checked blueprint.method "manual"}}>
-				<label class="form-check-label" for="blueprint-method-manual">Manual</label>
+				<label class="form-check-label" for="blueprint-method-manual">Manuelle</label>
 			</div>
 		</div>
 	</div>
@@ -27,15 +27,15 @@
 			<div id="blueprint-description" class="collapse {{#if display.blueprint-description}}show{{/if}}" data-parent="#accordion-blueprint">
 				<div class="card-body">
 					<div class="form-group">
-						<label>Name</label>
+						<label>Nom</label>
 						<input type="text" class="form-control" name="description.name" placeholder="Monster" {{{setValue blueprint.description.name}}}>
 					</div>
 					<div class="form-group quickstart-only">
-						<label>Level</label>
+						<label>Niveau</label>
 						<input type="number" class="form-control" name="description.level" placeholder="0" min="-3" max="30" {{{setValue blueprint.description.level}}}>
 					</div>
 					<div class="form-group quickstart-only">
-						<label>Role</label>
+						<label>Rôle</label>
 						<select class="form-control" name="description.role">
 							<option value="controller" {{selected blueprint.description.role "controller"}}>Controller</option>
 							<option value="defender" {{selected blueprint.description.role "defender"}}>Defender</option>
@@ -47,7 +47,7 @@
 						</select>
 					</div>
 					<div class="form-group quickstart-only">
-						<label>Rank</label>
+						<label>Rang</label>
 						<select class="form-control rank-toggle" name="description.rank">
 							<option value="minion" {{selected blueprint.description.rank "minion"}}>Minion</option>
 							<option value="standard" {{selected blueprint.description.rank "standard"}}>Standard</option>
@@ -56,19 +56,19 @@
 						</select>
 					</div>
 					<div class="form-group quickstart-only solo-only">
-						<label>Players</label>
+						<label>Joueurs</label>
 						<input type="number" class="form-control" name="description.players" placeholder="0" min="1" {{{setValue blueprint.description.players}}}>
 					</div>
 					<div class="form-group quickstart-only solo-only">
 						<label>Phase</label>
 						<div class="flex-input">
 							<input type="number" class="form-control" name="description.phase" placeholder="1" min="1" {{{setValue blueprint.description.phase}}}>
-							<span>of</span>
+							<span>sur</span>
 							<input type="number" class="form-control" name="description.phases" placeholder="1" min="1" {{{setValue blueprint.description.phases}}}>
 						</div>
 					</div>
 					<div class="form-group">
-						<label>Size</label>
+						<label>Taille</label>
 						<select class="form-control" name="description.size">
 							<option value="tiny" {{selected blueprint.description.size "tiny"}}>Tiny</option>
 							<option value="small" {{selected blueprint.description.size "small"}}>Small</option>
@@ -98,7 +98,7 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<label>Alignment</label>
+						<label>Alignement</label>
 						<select class="form-control" name="description.alignment">
 							<option value="lawful good" {{selected blueprint.description.alignment "lawful good"}}>Lawful Good</option>
 							<option value="neutral good" {{selected blueprint.description.alignment "neutral good"}}>Neutral Good</option>
@@ -131,7 +131,7 @@
 				</div>
 				<div class="card-footer text-right">
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add a Tag
+						<span class="fas fa-plus"></span> Ajouter un Tag
 					</button>
 				</div>
 			</div>
@@ -140,23 +140,23 @@
 			<div class="card-header">
 				<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#blueprint-display" {{#if display.blueprint-display}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Display</span>
+					<span class="title">Affichage</span>
 				</button>
 			</div>
 			<div id="blueprint-display" class="collapse {{#if display.blueprint-display}}show{{/if}}" data-parent="#accordion-blueprint">
 				<div class="card-body">
 					<div class="form-group">
-						<label>Theme <button type="button" class="btn btn-sm btn-help icon-only" data-toggle="modal" data-target="#modal-blueprint-help-theme"><span class="fas fa-question-circle"></span></button></label>
+						<label>Thème <button type="button" class="btn btn-sm btn-help icon-only" data-toggle="modal" data-target="#modal-blueprint-help-theme"><span class="fas fa-question-circle"></span></button></label>
 						<select class="form-control" name="display.theme">
-							<option value="default" {{selected blueprint.display.theme "default"}}>Default</option>
-							<option value="diamond" {{selected blueprint.display.theme "diamond"}}>Diamond</option>
+							<option value="default" {{selected blueprint.display.theme "default"}}>Par défaut</option>
+							<option value="diamond" {{selected blueprint.display.theme "diamond"}}>Diamant</option>
 							<option value="giffyglyph" {{selected blueprint.display.theme "giffyglyph"}}>Giffyglyph</option>
 							<option value="5e" {{selected blueprint.display.theme "5e"}}>5e</option>
 							<option value="transparent" {{selected blueprint.display.theme "transparent"}}>Transparent</option>
 						</select>
 					</div>
 					<div class="form-group">
-						<label>Columns</label>
+						<label>Colonnes</label>
 						<select class="form-control" name="display.columns">
 							<option value="1" {{selected blueprint.display.columns "1"}}>1</option>
 							<option value="2" {{selected blueprint.display.columns "2"}}>2</option>
@@ -181,7 +181,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-armor" {{#if display.blueprint-armor}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Armor</span>
+					<span class="title">Défense</span>
 				</button>
 			</div>
 			<div id="blueprint-armor" class="collapse {{#if display.blueprint-armor}}show{{/if}}" data-parent="#accordion-blueprint">
@@ -191,7 +191,7 @@
 						<input type="number" class="form-control" name="ac.base" placeholder="0" {{{setValue blueprint.ac.base}}}>
 					</div>
 					<div class="form-group quickstart-only">
-						<label>Modifier</label>
+						<label>Modificateur</label>
 						<input type="number" class="form-control" name="ac.modifier" placeholder="0" {{{setValue blueprint.ac.modifier}}}>
 					</div>
 					<div class="form-group">
@@ -205,7 +205,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-hp" {{#if display.blueprint-hp}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Hit Points</span>
+					<span class="title">Points de vie</span>
 				</button>
 			</div>
 			<div id="blueprint-hp" class="collapse {{#if display.blueprint-hp}}show{{/if}}" data-parent="#accordion-blueprint">
@@ -215,7 +215,7 @@
 						<input type="number" class="form-control" name="hp.average" placeholder="0" min="0" {{{setValue blueprint.hp.average}}}>
 					</div>
 					<div class="form-group quickstart-only">
-						<label>Modifier</label>
+						<label>Modificateur</label>
 						<input type="number" class="form-control" name="hp.modifier" placeholder="0" {{{setValue blueprint.hp.modifier}}}>
 					</div>
 					<div class="form-group manual-only">
@@ -229,13 +229,13 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-damage" {{#if display.blueprint-damage}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Damage</span>
+					<span class="title">Dégâts</span>
 				</button>
 			</div>
 			<div id="blueprint-damage" class="collapse {{#if display.blueprint-damage}}show{{/if}}" data-parent="#accordion-blueprint">
 				<div class="card-body">
 					<div class="form-group quickstart-only">
-						<label>Modifier</label>
+						<label>Modificateur</label>
 						<input type="number" class="form-control" name="damage.modifier" placeholder="0" {{{setValue blueprint.damage.modifier}}}>
 					</div>
 				</div>
@@ -245,7 +245,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-speed" {{#if display.blueprint-speed}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Speed</span>
+					<span class="title">Vitesse</span>
 				</button>
 			</div>
 			<div id="blueprint-speed" class="collapse {{#if display.blueprint-speed}}show{{/if}}" data-parent="#accordion-blueprint">
@@ -281,7 +281,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-abilities" {{#if display.blueprint-abilities}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Ability Scores</span>
+					<span class="title">Attributs</span>
 				</button>
 			</div>
 			<div id="blueprint-abilities" class="collapse {{#if display.blueprint-abilities}}show{{/if}}" data-parent="#accordion-blueprint">
@@ -387,7 +387,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-saving-throws" {{#if display.blueprint-saving-throws}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Saving Throws</span>
+					<span class="title">Jets de sauvegarde</span>
 					<span class="badge manual-only">{{blueprint.savingThrows.length}}</span>
 				</button>
 			</div>
@@ -476,7 +476,7 @@
 				</div>
 				<div class="card-footer text-right manual-only">
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add a Saving Throw
+						<span class="fas fa-plus"></span> Ajouter un Jet de Sauvegarde
 					</button>
 				</div>
 			</div>
@@ -485,7 +485,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-skills" {{#if display.blueprint-skills}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Skills</span>
+					<span class="title">Compétences</span>
 					<span class="badge">{{blueprint.skills.length}}</span>
 				</button>
 			</div>
@@ -497,7 +497,7 @@
 				</div>
 				<div class="card-footer text-right">
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add a Skill
+						<span class="fas fa-plus"></span> Ajouter une compétence
 					</button>
 				</div>
 			</div>
@@ -506,7 +506,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-vulnerability" {{#if display.blueprint-vulnerability}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Vulnerabilities</span>
+					<span class="title">Vulnérabilités</span>
 					<span class="badge">{{blueprint.vulnerabilities.length}}</span>
 				</button>
 			</div>
@@ -518,7 +518,7 @@
 				</div>
 				<div class="card-footer text-right">
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add a Vulnerability
+						<span class="fas fa-plus"></span> Ajouter une vulnérabilité
 					</button>
 				</div>
 			</div>
@@ -527,7 +527,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-resistance" {{#if display.blueprint-resistance}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Resistances</span>
+					<span class="title">Résistances</span>
 					<span class="badge">{{blueprint.resistances.length}}</span>
 				</button>
 			</div>
@@ -539,7 +539,7 @@
 				</div>
 				<div class="card-footer text-right">
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add a Resistance
+						<span class="fas fa-plus"></span> Ajouter une résistance
 					</button>
 				</div>
 			</div>
@@ -548,7 +548,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-immunity" {{#if display.blueprint-immunity}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Immunities (Damage)</span>
+					<span class="title">Immunités (dégâts)</span>
 					<span class="badge">{{blueprint.immunities.length}}</span>
 				</button>
 			</div>
@@ -560,7 +560,7 @@
 				</div>
 				<div class="card-footer text-right">
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add an Immunity
+						<span class="fas fa-plus"></span> Ajouter une immunité
 					</button>
 				</div>
 			</div>
@@ -569,7 +569,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-condition" {{#if display.blueprint-condition}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Immunities (Conditions)</span>
+					<span class="title">Immunités (conditions)</span>
 					<span class="badge">{{blueprint.conditions.length}}</span>
 				</button>
 			</div>
@@ -581,7 +581,7 @@
 				</div>
 				<div class="card-footer text-right">
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add an Immunity
+						<span class="fas fa-plus"></span> Ajouter une immunité
 					</button>
 				</div>
 			</div>
@@ -590,29 +590,29 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-senses" {{#if display.blueprint-senses}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Senses</span>
+					<span class="title">Sens</span>
 				</button>
 			</div>
 			<div id="blueprint-senses" class="collapse {{#if display.blueprint-senses}}show{{/if}}" data-parent="#accordion-blueprint">
 				<div class="card-body">
 					<div class="form-group">
-						<label>Blindsight</label>
+						<label>Vision aveugle</label>
 						<input type="text" class="form-control" name="senses.blindsight" {{{setValue blueprint.senses.blindsight}}}>
 					</div>
 					<div class="form-group">
-						<label>Darkvision</label>
+						<label>Vision dans le noir</label>
 						<input type="text" class="form-control" name="senses.darkvision" {{{setValue blueprint.senses.darkvision}}}>
 					</div>
 					<div class="form-group">
-						<label>Tremorsense</label>
+						<label>Perception des vibrations</label>
 						<input type="text" class="form-control" name="senses.tremorsense" {{{setValue blueprint.senses.tremorsense}}}>
 					</div>
 					<div class="form-group">
-						<label>Truesight</label>
+						<label>Vision véritable</label>
 						<input type="text" class="form-control" name="senses.truesight" {{{setValue blueprint.senses.truesight}}}>
 					</div>
 					<div class="form-group">
-						<label>Other</label>
+						<label>Autre</label>
 						<input type="text" class="form-control" name="senses.other" {{{setValue blueprint.senses.other}}}>
 					</div>
 				</div>
@@ -622,7 +622,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-languages" {{#if display.blueprint-languages}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Languages</span>
+					<span class="title">Langues</span>
 					<span class="badge">{{blueprint.languages.length}}</span>
 				</button>
 			</div>
@@ -634,7 +634,7 @@
 				</div>
 				<div class="card-footer text-right">
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add a Language
+						<span class="fas fa-plus"></span> Ajouter une langue
 					</button>
 				</div>
 			</div>
@@ -693,7 +693,7 @@
 						<input type="text" class="form-control" name="challenge.custom.rating" placeholder="0" min="0" {{{setValue blueprint.challenge.custom.rating}}}>
 					</div>
 					<div class="form-group custom" {{{customToggle blueprint.challenge.rating}}}>
-						<label>Proficiency</label>
+						<label>Maîtrise</label>
 						<input type="number" class="form-control" name="challenge.custom.proficiency" placeholder="0" min="0" {{{setValue blueprint.challenge.custom.proficiency}}}>
 					</div>
 					<div class="form-group custom" {{{customToggle blueprint.challenge.rating}}}>
@@ -723,19 +723,19 @@
 					</button>
 					<div class="dropdown dropdown-options quickstart-only">
 						<button class="btn btn-sm btn-secondary" type="button" data-toggle="dropdown">
-							<span class="fas fa-plus"></span> Add a Trait
+							<span class="fas fa-plus"></span> Ajouter un trait
 						</button>
 						<div class="dropdown-menu dropdown-menu-right">
 							<button type="button" class="dropdown-item btn-add">
-								<span class="fas fa-edit"></span>Custom Trait
+								<span class="fas fa-edit"></span>Trait personnalisé
 							</button>
 							<button type="button" class="dropdown-item" data-toggle="modal" data-target="#modal-blueprint-traits">
-								<span class="fas fa-list"></span>Select Traits
+								<span class="fas fa-list"></span>Sélectionner des traits
 							</button>
 						</div>
 					</div>
 					<button type="button" class="btn btn-sm btn-secondary btn-add manual-only">
-						<span class="fas fa-plus"></span> Add a Trait
+						<span class="fas fa-plus"></span> Ajouter un trait
 					</button>
 				</div>
 			</div>
@@ -759,7 +759,7 @@
 						<span class="fas fa-question"></span>
 					</button>
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add an Action
+						<span class="fas fa-plus"></span> Ajouter une action
 					</button>
 				</div>
 			</div>
@@ -768,7 +768,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-reaction" {{#if display.blueprint-reaction}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Reactions</span>
+					<span class="title">Réactions</span>
 					<span class="badge">{{blueprint.reactions.length}}</span>
 				</button>
 			</div>
@@ -783,7 +783,7 @@
 						<span class="fas fa-question"></span>
 					</button>
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add a Reaction
+						<span class="fas fa-plus"></span> Ajouter une réaction
 					</button>
 				</div>
 			</div>
@@ -792,7 +792,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-paragon-action" {{#if display.blueprint-paragon-action}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Paragon Actions</span>
+					<span class="title">Actions Paragon</span>
 				</button>
 			</div>
 			<div id="blueprint-paragon-action" class="collapse {{#if display.blueprint-paragon-action}}show{{/if}}" data-parent="#accordion-blueprint">
@@ -816,14 +816,14 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-legendary-action" {{#if display.blueprint-legendary-action}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Legendary Actions</span>
+					<span class="title">Actions Légendaires</span>
 					<span class="badge">{{blueprint.legendaryActions.length}}</span>
 				</button>
 			</div>
 			<div id="blueprint-legendary-action" class="collapse {{#if display.blueprint-legendary-action}}show{{/if}}" data-parent="#accordion-blueprint">
 				<div class="card-body">
 					<div class="form-group section-end">
-						<label>Per Round</label>
+						<label>Par Round</label>
 						<input type="number" class="form-control" name="legendaryActionsPerRound" placeholder="0" min="0" {{{setValue blueprint.legendaryActionsPerRound}}}>
 					</div>
 					{{#each blueprint.legendaryActions}}
@@ -835,7 +835,7 @@
 						<span class="fas fa-question"></span>
 					</button>
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add a Legendary Action
+						<span class="fas fa-plus"></span> Ajouter une Action Légendaire
 					</button>
 				</div>
 			</div>
@@ -844,7 +844,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-lair-action" {{#if display.blueprint-lair-action}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Lair Actions</span>
+					<span class="title">Actions d'Antre</span>
 					<span class="badge">{{blueprint.lairActions.length}}</span>
 				</button>
 			</div>
@@ -863,7 +863,7 @@
 						<span class="fas fa-question"></span>
 					</button>
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add a Lair Action
+						<span class="fas fa-plus"></span> Ajouter une Action d'Antre
 					</button>
 				</div>
 			</div>
@@ -887,7 +887,7 @@
 						<span class="fas fa-question"></span>
 					</button>
 					<button type="button" class="btn btn-sm btn-secondary btn-add">
-						<span class="fas fa-plus"></span> Add a Note
+						<span class="fas fa-plus"></span> Ajouter une note
 					</button>
 				</div>
 			</div>
@@ -977,7 +977,7 @@
 					<div class="card">
 						<div class="card-header" id="headingFour">
 							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-								4. Shortcodes & Modifiers
+								4. Shortcodes & Modificateur
 							</button>
 						</div>
 						<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">

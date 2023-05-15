@@ -1,7 +1,7 @@
 <div class="repeatable-item">
 	{{> BlueprintFormRepeatingMenu}}
 	<div class="form-group">
-		<label>Skill</label>
+		<label>Compétence</label>
 		<select class="form-control custom-toggle" data-name="name">
 			<option value="custom" {{selected name "custom"}}>Custom</option>
 			<option value="acrobatics" {{selectedDefault name "acrobatics"}}>Acrobatics</option>
@@ -25,7 +25,7 @@
 		</select>
 	</div>
 	<div class="form-group custom" {{{customToggle name}}}>
-		<label>Name</label>
+		<label>Nom</label>
 		<input type="text" class="form-control" data-name="custom.name" {{{setValue custom.name}}}>
 	</div>
 	<div class="form-group custom" {{{customToggle name}}}>
@@ -40,7 +40,7 @@
 		</select>
 	</div>
 	<div class="form-group">
-		<label>Proficiency</label>
+		<label>Maîtrise</label>
 		<select class="form-control" data-name="proficiency">
 			<option value="proficient" {{selectedDefault proficiency "proficient"}}>Proficient</option>
 			<option value="expertise" {{selected proficiency "expertise"}}>Expertise</option>

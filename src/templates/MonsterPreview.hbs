@@ -24,7 +24,7 @@
 					</div>
 					{{#if display.quickstart}}
 						<div class="monster-quickstart">
-							<p>Level {{monster.description.level}} {{fmtCapitalise monster.description.role}}<br/> {{fmtCapitalise monster.description.rank}} <span class="solo-only">vs {{monster.description.players}} </span>({{fmtLocaleString monster.challenge.xp}} XP)</p>
+							<p>Niveau {{monster.description.level}} {{fmtCapitalise monster.description.role}}<br/> {{fmtCapitalise monster.description.rank}} <span class="solo-only">vs {{monster.description.players}} </span>({{fmtLocaleString monster.challenge.xp}} XP)</p>
 						</div>
 					{{/if}}
 				</div>
@@ -35,7 +35,7 @@
 					{{#if display.armorClass}}
 						<li class="monster-ac">
 							<p>
-								<span class="label">Armor Class</span>
+								<span class="label">Défenses</span>
 								<span>
 									{{#if monster.ac.value}}{{monster.ac.value}} {{/if}}
 									{{#if monster.ac.type}}({{monster.ac.type}}){{/if}}
@@ -46,7 +46,7 @@
 					{{#if display.hitPoints}}
 						<li class="monster-hp">
 							<p>
-								<span class="label">Hit Points</span>
+								<span class="label">Points de vie</span>
 								<span>
 									{{#if monster.hp.average}}{{monster.hp.average}} {{/if}}
 									{{#if monster.hp.roll}}({{monster.hp.roll}}){{/if}}
@@ -57,7 +57,7 @@
 					{{#if display.speeds}}
 						<li class="monster-speed">
 							<p>
-								<span class="label">Speed</span>
+								<span class="label">Vitesse</span>
 								<span>{{{fmtMonsterSpeeds monster.speeds}}}</span>
 							</p>
 						</li>
@@ -67,7 +67,7 @@
 			<hr/>
 			<div class="monster-abilities">
 				<div class="monster-ability">
-					<span class="label">Str</span>
+					<span class="label">For</span>
 					<span>{{monster.abilities.str.score}} <span class="modifier">({{{fmtModifier monster.abilities.str.modifier}}})</span></span>
 				</div>
 				<div class="monster-ability">
@@ -83,7 +83,7 @@
 					<span>{{monster.abilities.int.score}} <span class="modifier">({{{fmtModifier monster.abilities.int.modifier}}})</span></span>
 				</div>
 				<div class="monster-ability">
-					<span class="label">Wis</span>
+					<span class="label">Sag</span>
 					<span>{{monster.abilities.wis.score}} <span class="modifier">({{{fmtModifier monster.abilities.wis.modifier}}})</span></span>
 				</div>
 				<div class="monster-ability">
@@ -117,7 +117,7 @@
 					{{#if display.skills}}
 						<li class="monster-skills">
 							<p>
-								<span class="label">Skills</span>
+								<span class="label">Compétences</span>
 								<span>
 									{{#each monster.skills}}
 										{{fmtCapitalise name}} {{fmtModifier modifier}}{{#unless @last}}, {{/unless}}
@@ -185,7 +185,7 @@
 					{{#if display.languages}}
 						<li class="monster-languages">
 							<p>
-								<span class="label">Languages</span>
+								<span class="label">Langues</span>
 								<span>
 									{{#each monster.languages}}
 										{{fmtCapitalise this}}{{#unless @last}}, {{/unless}}
@@ -211,20 +211,20 @@
 				<ul class="quickstart-helpers">
 					<li>
 						<p>
-							<span class="label">Attacks</span>
+							<span class="label">Attaque</span>
 							<span>{{#if monster.attack.isActive}}DC {{monster.attack.bonus}} vs AC{{#if monster.attack.isActiveSmaller}} − 10{{/if}}{{/if}}{{#unless monster.attack.isActive}}{{fmtModifier monster.attack.bonus}} to hit{{/unless}}. <i>Hit:</i> {{monster.attack.damage}} damage</span>
 						</p>
 					</li>
 					<li>
 						<p>
-							<span class="label">Attack DCs</span>
-							<span>Primary DC {{monster.dc.primary}}, Secondary DC {{monster.dc.secondary}}</span>
+							<span class="label">DD Attaque</span>
+							<span>DD Principal {{monster.dc.primary}}, DD Secondaire {{monster.dc.secondary}}</span>
 						</p>
 					</li>
 					{{#if monster.attack.isActive}}
 						<li>
 							<p>
-								<span class="label">Active Defence</span>
+								<span class="label">Défense Active</span>
 								<span>{{#if monster.attack.isActiveSmaller}}<i>(Smaller Variant) </i>{{/if}}You don't roll to attack. Instead, your targets roll to defend.</span>
 							</p>
 						</li>
@@ -297,7 +297,6 @@
 					{{/each}}
 				</div>
 			{{/if}}
-			<p class="monster-footer">Made with Giffyglyph's Monster Maker</p>
 		</div>
 		<div class="monster-contents-footer"></div>
 	</div>
@@ -305,7 +304,7 @@
 <div>
 	{{#if display.downloadPng}}
 		<button type="button" class="btn btn-sm btn-primary btn-png">
-			<span class="fas fa-camera"></span> Download as PNG
+			<span class="fas fa-camera"></span> Sauvegarder en PNG
 		</button>
 	{{/if}}
 	<button type="button" class="btn btn-sm btn-primary btn-columns icon-only icon-border">
