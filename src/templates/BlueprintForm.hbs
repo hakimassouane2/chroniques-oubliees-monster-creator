@@ -28,7 +28,7 @@
 				<div class="card-body">
 					<div class="form-group">
 						<label>Nom</label>
-						<input type="text" class="form-control" name="description.name" placeholder="Monster" {{{setValue blueprint.description.name}}}>
+						<input type="text" class="form-control" name="description.name" placeholder="Monstre" {{{setValue blueprint.description.name}}}>
 					</div>
 					<div class="form-group quickstart-only">
 						<label>Niveau</label>
@@ -792,7 +792,7 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-paragon-action" {{#if display.blueprint-paragon-action}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Actions Paragon</span>
+					<span class="title">Actions Spéciales</span>
 				</button>
 			</div>
 			<div id="blueprint-paragon-action" class="collapse {{#if display.blueprint-paragon-action}}show{{/if}}" data-parent="#accordion-blueprint">
@@ -800,13 +800,13 @@
 					<div class="form-group">
 						<label>Actions</label>
 						<select class="form-control custom-toggle" name="paragonActions.type">
-							<option value="custom" {{selected blueprint.paragonActions.type "custom"}}>Custom</option>
-							<option value="default" {{selected blueprint.paragonActions.type "default"}}>Default</option>
-							<option value="none" {{selected blueprint.paragonActions.type "none"}}>None</option>
+							<option value="custom" {{selected blueprint.paragonActions.type "custom"}}>Perso</option>
+							<option value="default" {{selected blueprint.paragonActions.type "default"}}>Par défaut</option>
+							<option value="none" {{selected blueprint.paragonActions.type "none"}}>Aucune</option>
 						</select>
 					</div>
 					<div class="form-group custom" {{{customToggle blueprint.paragonActions.type}}}>
-						<label>Amount</label>
+						<label>Montant</label>
 						<input type="number" class="form-control" name="paragonActions.amount" placeholder="0" min="0" {{{setValue blueprint.paragonActions.amount}}}>
 					</div>
 				</div>

@@ -260,15 +260,15 @@
 				{{/each}}
 			{{/if}}
 			{{#if display.paragonActions}}
-				<h5>Paragon Actions</h5>
+				<h5>Actions Spéciales</h5>
 				<div class="h5-border"></div>
-				<p class="paragon-actions">You can take {{monster.paragonActions}} paragon action(s), choosing to either move or perform one action. Only one paragon action can be used at a time and only at the end of another creature's turn. You regain spent paragon actions at the start of your turn.</p>
+				<p class="paragon-actions">Vous pouvez effectuer {{monster.paragonActions}} action(s) spéciale, en choisissant soit de vous déplacer, soit d'utiliser l'une de vos action. Une seule action spéciale peut être utilisée à la fois et seulement à la fin du tour d'une autre créature. Vous récupérez les actions spéciales dépensées au début de votre tour.</p>
 			{{/if}}
 			{{#if display.legendaryActions}}
-				<h5>Legendary Actions</h5>
+				<h5>Actions Légendaires</h5>
 				<div class="h5-border"></div>
 				{{#if display.legendaryActionsPerRound}}
-					<p class="legendary-per-round">You can take {{monster.legendaryActionsPerRound}} legendary action(s), choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. You regain spent legendary actions at the start of your turn.</p>
+					<p class="legendary-per-round">Vous pouvez entreprendre {{monster.legendaryActionsPerRound}} action(s) légendaire(s), en choisissant parmi les options ci-dessous. Une seule option d'action légendaire peut être utilisée à la fois et seulement à la fin du tour d'une autre créature. Vous récupérez les actions légendaires dépensées au début de votre tour.</p>
 				{{/if}}
 				{{#each monster.legendaryActions}}
 					<div class="monster-legendary-action">
@@ -277,10 +277,10 @@
 				{{/each}}
 			{{/if}}
 			{{#if display.lairActions}}
-				<h5>Lair Actions</h5>
+				<h5>Actions D'Antre</h5>
 				<div class="h5-border"></div>
 				{{#if display.lairActionsInitiative}}
-					<p class="lair-initiative">On initiative count {{monster.lairActionsInitiative}} (losing initiative ties), you may take a lair action to trigger one of the following effects. You can't use the same effect two rounds in a row.</p>
+					<p class="lair-initiative">Sur le compte d'initiative {{monster.lairActionsInitiative}}, vous pouvez entreprendre une action de repaire pour déclencher l'un des effets suivants. Vous ne pouvez pas utiliser le même effet deux rounds de suite.</p>
 				{{/if}}
 				{{#each monster.lairActions}}
 					<div class="monster-lair-action">
