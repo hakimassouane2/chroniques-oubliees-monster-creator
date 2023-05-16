@@ -66,6 +66,14 @@ const Helpers = (function () {
 
     Handlebars.registerHelper("fmtMonsterSpeeds", function (speeds) {
       let output = "";
+      let speedMap = {
+        walk: "Marche",
+        burrow: "Creusement",
+        climb: "Escalade",
+        fly: "Vol",
+        hover: "Survol",
+        swim: "Nage",
+      };
       speeds.forEach(function (speed, index) {
         switch (speed.type) {
           case "normal":
@@ -73,7 +81,7 @@ const Helpers = (function () {
             output += speed.value;
             break;
           default:
-            output += speed.type + " " + speed.value;
+            output += speedMap[speed.type] + " " + speed.value;
             break;
         }
         if (index < speeds.length - 1) {
