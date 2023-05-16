@@ -94,26 +94,6 @@
 			{{#if display.stats}}
 				<hr/>
 				<ul class="monster-stats">
-					{{#if display.savingThrows}}
-						<li class="monster-saves">
-							<p>
-								<span class="label">{{#if monster.attack.isActive}}Saves{{/if}}{{#unless monster.attack.isActive}}Saving Throws{{/unless}}</span>
-								<span>
-									{{#if display.quickstart}}
-										{{#if monster.attack.isActive}}
-											{{{fmtMonsterSavingThrowsQuickstartActive monster.savingThrows}}}
-										{{/if}}
-										{{#unless monster.attack.isActive}}
-											{{fmtMonsterSavingThrowsQuickstart monster.savingThrows}}
-										{{/unless}}
-									{{/if}}
-									{{#unless display.quickstart}}
-										{{fmtMonsterSavingThrows monster.savingThrows}}
-									{{/unless}}
-								</span>
-							</p>
-						</li>
-					{{/if}}
 					{{#if display.skills}}
 						<li class="monster-skills">
 							<p>

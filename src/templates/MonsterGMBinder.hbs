@@ -17,22 +17,6 @@ ___ > ##
 ({{{fmtModifier abilities.int.modifier}}})|{{abilities.wis.score}}
 ({{{fmtModifier abilities.wis.modifier}}})|{{abilities.cha.score}}
 ({{{fmtModifier abilities.cha.modifier}}})| > ___
-{{#if savingThrows}}
-  {{#if isQuickstart}}
-    {{#if attack.isActive}}
-      > - **Saves**
-      {{fmtMonsterSavingThrowsQuickstartActiveGMBinder savingThrows}}
-    {{/if}}
-    {{#unless attack.isActive}}
-      > - **Saving Throws**
-      {{fmtMonsterSavingThrowsQuickstart savingThrows}}
-    {{/unless}}
-  {{/if}}
-  {{#unless isQuickstart}}
-    > - **Saving Throws**
-    {{fmtMonsterSavingThrows savingThrows}}
-  {{/unless}}
-{{/if}}
 {{#if skills}}
   > - **Skills**
   {{#each skills}}{{fmtCapitalise name}}

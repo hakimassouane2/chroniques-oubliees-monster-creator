@@ -13,6 +13,7 @@ class Monster {
       alignment: null,
       level: null,
       role: null,
+      subRole: null,
       rank: null,
       players: null,
     };
@@ -42,14 +43,13 @@ class Monster {
       cha: null,
     };
     this.archetypes = {
-      str: null,
-      dex: null,
-      con: null,
-      int: null,
-      wis: null,
-      cha: null,
+      fig: null,
+      rog: null,
+      exp: null,
+      sag: null,
+      art: null,
+      dip: null,
     };
-    this.savingThrows = [];
     this.skills = [];
     this.vulnerabilities = [];
     this.resistances = [];
@@ -147,6 +147,14 @@ class Monster {
 
   setRole(role) {
     this.description.role = role;
+  }
+
+  getSubRole() {
+    return this.description.subRole;
+  }
+
+  setSubRole(subRole) {
+    this.description.subRole = subRole;
   }
 
   getRank() {
@@ -293,23 +301,52 @@ class Monster {
     this.abilities.cha = cha;
   }
 
-  getSavingThrows() {
-    return this.savingThrows;
+  getArchetypeFig() {
+    return this.archetype.fig;
   }
 
-  setSavingThrows(savingThrows) {
-    this.savingThrows = savingThrows;
+  setArchetypeFig(fig) {
+    this.archetype.fig = fig;
   }
 
-  getSavingThrow(ability) {
-    let savingThrow = this.savingThrows.filter((x) => x.ability == ability)[0];
-    if (savingThrow == undefined) {
-      savingThrow = {
-        ability: ability,
-        modifier: this.abilities[ability].modifier,
-      };
-    }
-    return savingThrow;
+  getArchetypeRog() {
+    return this.archetype.rog;
+  }
+
+  setArchetypeRog(rog) {
+    this.archetype.rog = rog;
+  }
+
+  getArchetypeExp() {
+    return this.archetype.exp;
+  }
+
+  setArchetypeExp(exp) {
+    this.archetype.exp = exp;
+  }
+
+  getArchetypeSag() {
+    return this.archetype.sag;
+  }
+
+  setArchetypeSag(sag) {
+    this.archetype.sag = sag;
+  }
+
+  getArchetypeArt() {
+    return this.archetype.art;
+  }
+
+  setArchetypeArt(art) {
+    this.archetype.art = art;
+  }
+
+  getArchetypeDip() {
+    return this.archetype.dip;
+  }
+
+  setArchetypeDip(dip) {
+    this.archetype.dip = dip;
   }
 
   getSkills() {

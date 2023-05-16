@@ -69,7 +69,6 @@ class MonsterPreview extends Component {
       armorClass: monster.getAcValue() != null || monster.getAcType() != null,
       hitPoints: monster.getHpAverage() != null || monster.getHpRoll() != null,
       speeds: monster.getSpeeds().length > 0,
-      savingThrows: monster.getSavingThrows().length > 0,
       skills: monster.getSkills().length > 0,
       senses: monster.getSenses().length > 0,
       languages: monster.getLanguages().length > 0,
@@ -106,7 +105,6 @@ class MonsterPreview extends Component {
     options.header = options.headerTitle || options.headerDescription;
     options.defences = options.armorClass || options.hitPoints;
     options.stats =
-      options.savingThrows ||
       options.skills ||
       options.senses ||
       options.languages ||
