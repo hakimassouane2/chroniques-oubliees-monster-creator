@@ -49,6 +49,18 @@ const Helpers = (function () {
       return capitalise(text);
     });
 
+    Handlebars.registerHelper("fmtCapitaliseRole", function (text) {
+      let roleMap = {
+        controller: "Contrôleur",
+        defender: "Défenseur",
+        lurker: "Rôdeur",
+        skirmisher: "Éclaireur",
+        striker: "Assaillant",
+        supporter: "Soutien",
+      };
+      return roleMap[text];
+    });
+
     Handlebars.registerHelper("fmtLocaleString", function (value) {
       return Number(value).toLocaleString();
     });

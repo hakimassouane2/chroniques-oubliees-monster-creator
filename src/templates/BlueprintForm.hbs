@@ -38,12 +38,11 @@
 						<label>Rôle</label>
 						<select class="form-control" name="description.role">
 							<option value="controller" {{selected blueprint.description.role "controller"}}>Contrôleur</option>
-							<option value="defender" {{selected blueprint.description.role "defender"}}>Défenseurs</option>
-							<option value="lurker" {{selected blueprint.description.role "lurker"}}>Rôdeurs</option>
-							<option value="scout" {{selected blueprint.description.role "scout"}}>Scout</option>
-							<option value="sniper" {{selected blueprint.description.role "sniper"}}>Sniper</option>
+							<option value="defender" {{selected blueprint.description.role "defender"}}>Défenseur</option>
+							<option value="lurker" {{selected blueprint.description.role "lurker"}}>Rôdeur</option>
+							<option value="skirmisher" {{selected blueprint.description.role "skirmisher"}}>Éclaireur</option>
 							<option value="striker" {{selected blueprint.description.role "striker"}}>Assaillant</option>
-							<option value="supporter" {{selected blueprint.description.role "supporter"}}>Supporteurs</option>
+							<option value="supporter" {{selected blueprint.description.role "supporter"}}>Soutien</option>
 						</select>
 					</div>
 					<div class="form-group quickstart-only">
@@ -1052,14 +1051,13 @@
 			</div>
 			<div class="modal-body" filter="any">
 				<select class="form-control">
-					<option value="any" selected>Any role</option>
-					<option value="controller">Controller</option>
-					<option value="defender">Defender</option>
-					<option value="lurker">Lurker</option>
-					<option value="scout">Scout</option>
-					<option value="sniper">Sniper</option>
-					<option value="striker">Striker</option>
-					<option value="supporter">Supporter</option>
+					<option value="any" selected>Tout rôle</option>
+					<option value="controller">Contrôleur</option>
+					<option value="defender">Défenseur</option>
+					<option value="lurker">Rôdeur</option>
+					<option value="skirmisher">Tirailleur</option>
+					<option value="striker">Assaillant</option>
+					<option value="supporter">Supporteur</option>
 				</select>
 				<ul>
 					{{#each traits}}
