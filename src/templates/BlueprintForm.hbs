@@ -37,21 +37,21 @@
 					<div class="form-group quickstart-only">
 						<label>Rôle</label>
 						<select class="form-control" name="description.role">
-							<option value="controller" {{selected blueprint.description.role "controller"}}>Controller</option>
-							<option value="defender" {{selected blueprint.description.role "defender"}}>Defender</option>
-							<option value="lurker" {{selected blueprint.description.role "lurker"}}>Lurker</option>
+							<option value="controller" {{selected blueprint.description.role "controller"}}>Contrôleur</option>
+							<option value="defender" {{selected blueprint.description.role "defender"}}>Défenseurs</option>
+							<option value="lurker" {{selected blueprint.description.role "lurker"}}>Rôdeurs</option>
 							<option value="scout" {{selected blueprint.description.role "scout"}}>Scout</option>
 							<option value="sniper" {{selected blueprint.description.role "sniper"}}>Sniper</option>
-							<option value="striker" {{selected blueprint.description.role "striker"}}>Striker</option>
-							<option value="supporter" {{selected blueprint.description.role "supporter"}}>Supporter</option>
+							<option value="striker" {{selected blueprint.description.role "striker"}}>Assaillant</option>
+							<option value="supporter" {{selected blueprint.description.role "supporter"}}>Supporteurs</option>
 						</select>
 					</div>
 					<div class="form-group quickstart-only">
 						<label>Rang</label>
 						<select class="form-control rank-toggle" name="description.rank">
-							<option value="minion" {{selected blueprint.description.rank "minion"}}>Minion</option>
+							<option value="minion" {{selected blueprint.description.rank "minion"}}>Sbire</option>
 							<option value="standard" {{selected blueprint.description.rank "standard"}}>Standard</option>
-							<option value="elite" {{selected blueprint.description.rank "elite"}}>Elite</option>
+							<option value="elite" {{selected blueprint.description.rank "elite"}}>Élite</option>
 							<option value="solo" {{selected blueprint.description.rank "solo"}}>Solo</option>
 						</select>
 					</div>
@@ -70,46 +70,46 @@
 					<div class="form-group">
 						<label>Taille</label>
 						<select class="form-control" name="description.size">
-							<option value="tiny" {{selected blueprint.description.size "tiny"}}>Tiny</option>
-							<option value="small" {{selected blueprint.description.size "small"}}>Small</option>
-							<option value="medium" {{selectedDefault blueprint.description.size "medium"}}>Medium</option>
-							<option value="large" {{selected blueprint.description.size "large"}}>Large</option>
-							<option value="huge" {{selected blueprint.description.size "huge"}}>Huge</option>
-							<option value="gargantuan" {{selected blueprint.description.size "gargantuan"}}>Gargantuan</option>
+							<option value="tiny" {{selected blueprint.description.size "tiny"}}>Très Petite (TP)</option>
+							<option value="small" {{selected blueprint.description.size "small"}}>Petite (P)</option>
+							<option value="medium" {{selectedDefault blueprint.description.size "medium"}}>Moyenne (M)</option>
+							<option value="large" {{selected blueprint.description.size "large"}}>Grande (G)</option>
+							<option value="huge" {{selected blueprint.description.size "huge"}}>Très Grande (TG)</option>
+							<option value="gargantuan" {{selected blueprint.description.size "gargantuan"}}>Gigantesque (Gig)</option>
 						</select>
 					</div>
 					<div class="form-group">
 						<label>Type</label>
 						<select class="form-control" name="description.type">
 							<option value="aberration" {{selected blueprint.description.type "aberration"}}>Aberration</option>
-							<option value="beast" {{selected blueprint.description.type "beast"}}>Beast</option>
-							<option value="celestial" {{selected blueprint.description.type "celestial"}}>Celestial</option>
-							<option value="construct" {{selected blueprint.description.type "construct"}}>Construct</option>
+							<option value="construct" {{selected blueprint.description.type "construct"}}>Artificiel</option>
+							<option value="beast" {{selected blueprint.description.type "beast"}}>Bête</option>
+							<option value="celestial" {{selected blueprint.description.type "celestial"}}>Céleste</option>
 							<option value="dragon" {{selected blueprint.description.type "dragon"}}>Dragon</option>
-							<option value="elemental" {{selected blueprint.description.type "elemental"}}>Elemental</option>
-							<option value="fey" {{selected blueprint.description.type "fey"}}>Fey</option>
-							<option value="fiend" {{selected blueprint.description.type "fiend"}}>Fiend</option>
-							<option value="giant" {{selected blueprint.description.type "giant"}}>Giant</option>
-							<option value="humanoid" {{selectedDefault blueprint.description.type "humanoid"}}>Humanoid</option>
-							<option value="monstrosity" {{selected blueprint.description.type "monstrosity"}}>Monstrosity</option>
-							<option value="ooze" {{selected blueprint.description.type "ooze"}}>Ooze</option>
-							<option value="plant" {{selected blueprint.description.type "plant"}}>Plant</option>
-							<option value="undead" {{selected blueprint.description.type "undead"}}>Undead</option>
+							<option value="elemental" {{selected blueprint.description.type "elemental"}}>Élémentaire</option>
+							<option value="fey" {{selected blueprint.description.type "fey"}}>Fée</option>
+							<option value="fiend" {{selected blueprint.description.type "fiend"}}>Fiélon</option>
+							<option value="giant" {{selected blueprint.description.type "giant"}}>Géant</option>
+							<option value="humanoid" {{selectedDefault blueprint.description.type "humanoid"}}>Humanoïde</option>
+							<option value="monstrosity" {{selected blueprint.description.type "monstrosity"}}>Monstruosité</option>
+							<option value="undead" {{selected blueprint.description.type "undead"}}>Mort-vivant</option>
+							<option value="plant" {{selected blueprint.description.type "plant"}}>Plante</option>
+							<option value="ooze" {{selected blueprint.description.type "ooze"}}>Vase</option>
 						</select>
 					</div>
 					<div class="form-group">
 						<label>Alignement</label>
 						<select class="form-control" name="description.alignment">
-							<option value="lawful good" {{selected blueprint.description.alignment "lawful good"}}>Lawful Good</option>
-							<option value="neutral good" {{selected blueprint.description.alignment "neutral good"}}>Neutral Good</option>
-							<option value="chaotic good" {{selected blueprint.description.alignment "chaotic good"}}>Chaotic Good</option>
-							<option value="lawful neutral" {{selected blueprint.description.alignment "lawful neutral"}}>Lawful Neutral</option>
-							<option value="neutral" {{selectedDefault blueprint.description.alignment "neutral"}}>Neutral</option>
-							<option value="chaotic neutral" {{selected blueprint.description.alignment "chaotic neutral"}}>Chaotic Neutral</option>
-							<option value="lawful evil" {{selected blueprint.description.alignment "lawful evil"}}>Lawful Evil</option>
-							<option value="neutral evil" {{selected blueprint.description.alignment "neutral evil"}}>Neutral Evil</option>
-							<option value="chaotic evil" {{selected blueprint.description.alignment "chaotic evil"}}>Chaotic Evil</option>
-							<option value="unaligned" {{selected blueprint.description.alignment "unaligned"}}>Unaligned</option>
+							<option value="lawful good" {{selected blueprint.description.alignment "lawful good"}}>Loyal Bon</option>
+							<option value="neutral good" {{selected blueprint.description.alignment "neutral good"}}>Neutre Bon</option>
+							<option value="chaotic good" {{selected blueprint.description.alignment "chaotic good"}}>Chaotique Bon</option>
+							<option value="lawful neutral" {{selected blueprint.description.alignment "lawful neutral"}}>Loyal Neutre</option>
+							<option value="neutral" {{selectedDefault blueprint.description.alignment "neutral"}}>Neutre</option>
+							<option value="chaotic neutral" {{selected blueprint.description.alignment "chaotic neutral"}}>Chaotique Neutre</option>
+							<option value="lawful evil" {{selected blueprint.description.alignment "lawful evil"}}>Loyal Mauvais</option>
+							<option value="neutral evil" {{selected blueprint.description.alignment "neutral evil"}}>Neutre Mauvais</option>
+							<option value="chaotic evil" {{selected blueprint.description.alignment "chaotic evil"}}>Chaotique Mauvais</option>
+							<option value="unaligned" {{selected blueprint.description.alignment "unaligned"}}>Sans Alignement</option>
 						</select>
 					</div>
 				</div>
@@ -169,9 +169,9 @@
 					<div class="form-group">
 						<label>Position</label>
 						<select class="form-control" name="display.image.position">
-							<option value="banner" {{selected blueprint.display.image.position "banner"}}>Banner</option>
-							<option value="inline" {{selected blueprint.display.image.position "inline"}}>Inline</option>
-							<option value="none" {{selected blueprint.display.image.position "none"}}>None</option>
+							<option value="banner" {{selected blueprint.display.image.position "banner"}}>Bannière</option>
+							<option value="inline" {{selected blueprint.display.image.position "inline"}}>En ligne</option>
+							<option value="none" {{selected blueprint.display.image.position "none"}}>Aucune</option>
 						</select>
 					</div>
 				</div>
@@ -288,79 +288,79 @@
 				<div class="card-body">
 					<div class="quickstart-only unique-values">
 						<div class="form-group">
-							<label>1er (Meilleur)</label>
+							<label>Meilleur</label>
 							<select class="form-control" name="abilities.quickstart[0].ability" ability="{{blueprint.abilities.quickstart.[0].ability}}">
-								<option value="str" {{selected blueprint.abilities.quickstart.[0].ability "str"}}>Strength</option>
-								<option value="dex" {{selected blueprint.abilities.quickstart.[0].ability "dex"}}>Dexterity</option>
+								<option value="str" {{selected blueprint.abilities.quickstart.[0].ability "str"}}>Force</option>
+								<option value="dex" {{selected blueprint.abilities.quickstart.[0].ability "dex"}}>Dextérité</option>
 								<option value="con" {{selected blueprint.abilities.quickstart.[0].ability "con"}}>Constitution</option>
 								<option value="int" {{selected blueprint.abilities.quickstart.[0].ability "int"}}>Intelligence</option>
-								<option value="wis" {{selected blueprint.abilities.quickstart.[0].ability "wis"}}>Wisdom</option>
-								<option value="cha" {{selected blueprint.abilities.quickstart.[0].ability "cha"}}>Charisma</option>
+								<option value="wis" {{selected blueprint.abilities.quickstart.[0].ability "wis"}}>Sagesse</option>
+								<option value="cha" {{selected blueprint.abilities.quickstart.[0].ability "cha"}}>Charisme</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label>2ème</label>
 							<select class="form-control" name="abilities.quickstart[1].ability" ability="{{blueprint.abilities.quickstart.[1].ability}}">
-								<option value="str" {{selected blueprint.abilities.quickstart.[1].ability "str"}}>Strength</option>
-								<option value="dex" {{selected blueprint.abilities.quickstart.[1].ability "dex"}}>Dexterity</option>
+								<option value="str" {{selected blueprint.abilities.quickstart.[1].ability "str"}}></option>
+								<option value="dex" {{selected blueprint.abilities.quickstart.[1].ability "dex"}}>Dextérité</option>
 								<option value="con" {{selected blueprint.abilities.quickstart.[1].ability "con"}}>Constitution</option>
 								<option value="int" {{selected blueprint.abilities.quickstart.[1].ability "int"}}>Intelligence</option>
-								<option value="wis" {{selected blueprint.abilities.quickstart.[1].ability "wis"}}>Wisdom</option>
-								<option value="cha" {{selected blueprint.abilities.quickstart.[1].ability "cha"}}>Charisma</option>
+								<option value="wis" {{selected blueprint.abilities.quickstart.[1].ability "wis"}}>Sagesse</option>
+								<option value="cha" {{selected blueprint.abilities.quickstart.[1].ability "cha"}}>Charisme</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label>3ème</label>
 							<select class="form-control" name="abilities.quickstart[2].ability" ability="{{blueprint.abilities.quickstart.[2].ability}}">
-								<option value="str" {{selected blueprint.abilities.quickstart.[2].ability "str"}}>Strength</option>
-								<option value="dex" {{selected blueprint.abilities.quickstart.[2].ability "dex"}}>Dexterity</option>
+								<option value="str" {{selected blueprint.abilities.quickstart.[2].ability "str"}}>Force</option>
+								<option value="dex" {{selected blueprint.abilities.quickstart.[2].ability "dex"}}>Dextérité</option>
 								<option value="con" {{selected blueprint.abilities.quickstart.[2].ability "con"}}>Constitution</option>
 								<option value="int" {{selected blueprint.abilities.quickstart.[2].ability "int"}}>Intelligence</option>
-								<option value="wis" {{selected blueprint.abilities.quickstart.[2].ability "wis"}}>Wisdom</option>
-								<option value="cha" {{selected blueprint.abilities.quickstart.[2].ability "cha"}}>Charisma</option>
+								<option value="wis" {{selected blueprint.abilities.quickstart.[2].ability "wis"}}>Sagesse</option>
+								<option value="cha" {{selected blueprint.abilities.quickstart.[2].ability "cha"}}>Charisme</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label>4ème</label>
 							<select class="form-control" name="abilities.quickstart[3].ability" ability="{{blueprint.abilities.quickstart.[3].ability}}">
-								<option value="str" {{selected blueprint.abilities.quickstart.[3].ability "str"}}>Strength</option>
-								<option value="dex" {{selected blueprint.abilities.quickstart.[3].ability "dex"}}>Dexterity</option>
+								<option value="str" {{selected blueprint.abilities.quickstart.[3].ability "str"}}>Force</option>
+								<option value="dex" {{selected blueprint.abilities.quickstart.[3].ability "dex"}}>Dextérité</option>
 								<option value="con" {{selected blueprint.abilities.quickstart.[3].ability "con"}}>Constitution</option>
 								<option value="int" {{selected blueprint.abilities.quickstart.[3].ability "int"}}>Intelligence</option>
-								<option value="wis" {{selected blueprint.abilities.quickstart.[3].ability "wis"}}>Wisdom</option>
-								<option value="cha" {{selected blueprint.abilities.quickstart.[3].ability "cha"}}>Charisma</option>
+								<option value="wis" {{selected blueprint.abilities.quickstart.[3].ability "wis"}}>Sagesse</option>
+								<option value="cha" {{selected blueprint.abilities.quickstart.[3].ability "cha"}}>Charisme</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label>5ème</label>
 							<select class="form-control" name="abilities.quickstart[4].ability" ability="{{blueprint.abilities.quickstart.[4].ability}}">
-								<option value="str" {{selected blueprint.abilities.quickstart.[4].ability "str"}}>Strength</option>
-								<option value="dex" {{selected blueprint.abilities.quickstart.[4].ability "dex"}}>Dexterity</option>
+								<option value="str" {{selected blueprint.abilities.quickstart.[4].ability "str"}}>Force</option>
+								<option value="dex" {{selected blueprint.abilities.quickstart.[4].ability "dex"}}>Dextérité</option>
 								<option value="con" {{selected blueprint.abilities.quickstart.[4].ability "con"}}>Constitution</option>
 								<option value="int" {{selected blueprint.abilities.quickstart.[4].ability "int"}}>Intelligence</option>
-								<option value="wis" {{selected blueprint.abilities.quickstart.[4].ability "wis"}}>Wisdom</option>
-								<option value="cha" {{selected blueprint.abilities.quickstart.[4].ability "cha"}}>Charisma</option>
+								<option value="wis" {{selected blueprint.abilities.quickstart.[4].ability "wis"}}>Sagesse</option>
+								<option value="cha" {{selected blueprint.abilities.quickstart.[4].ability "cha"}}>Charisme</option>
 							</select>
 						</div>
 						<div class="form-group">
-							<label>6ème (Pire)</label>
+							<label>Pire</label>
 							<select class="form-control" name="abilities.quickstart[5].ability" ability="{{blueprint.abilities.quickstart.[5].ability}}">
-								<option value="str" {{selected blueprint.abilities.quickstart.[5].ability "str"}}>Strength</option>
-								<option value="dex" {{selected blueprint.abilities.quickstart.[5].ability "dex"}}>Dexterity</option>
+								<option value="str" {{selected blueprint.abilities.quickstart.[5].ability "str"}}>Force</option>
+								<option value="dex" {{selected blueprint.abilities.quickstart.[5].ability "dex"}}>Dextérité</option>
 								<option value="con" {{selected blueprint.abilities.quickstart.[5].ability "con"}}>Constitution</option>
 								<option value="int" {{selected blueprint.abilities.quickstart.[5].ability "int"}}>Intelligence</option>
-								<option value="wis" {{selected blueprint.abilities.quickstart.[5].ability "wis"}}>Wisdom</option>
-								<option value="cha" {{selected blueprint.abilities.quickstart.[5].ability "cha"}}>Charisma</option>
+								<option value="wis" {{selected blueprint.abilities.quickstart.[5].ability "wis"}}>Sagesse</option>
+								<option value="cha" {{selected blueprint.abilities.quickstart.[5].ability "cha"}}>Charisme</option>
 							</select>
 						</div>
 					</div>
 					<div class="manual-only">
 						<div class="form-group">
-							<label>Strength</label>
+							<label>Force</label>
 							<input type="number" class="form-control" name="abilities.str" placeholder="0" min="0" {{{setValue blueprint.abilities.str}}}>
 						</div>
 						<div class="form-group">
-							<label>Dexterity</label>
+							<label>Dextérité</label>
 							<input type="number" class="form-control" name="abilities.dex" placeholder="0" min="0" {{{setValue blueprint.abilities.dex}}}>
 						</div>
 						<div class="form-group">
@@ -372,12 +372,118 @@
 							<input type="number" class="form-control" name="abilities.int" placeholder="0" min="0" {{{setValue blueprint.abilities.int}}}>
 						</div>
 						<div class="form-group">
-							<label>Wisdom</label>
+							<label>Sagesse</label>
 							<input type="number" class="form-control" name="abilities.wis" placeholder="0" min="0" {{{setValue blueprint.abilities.wis}}}>
 						</div>
 						<div class="form-group">
-							<label>Charisma</label>
+							<label>Charisme</label>
 							<input type="number" class="form-control" name="abilities.cha" placeholder="0" min="0" {{{setValue blueprint.abilities.cha}}}>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-archetypes" {{#if display.blueprint-archetypes}}aria-expanded="true"{{/if}}>
+					<span class="fas fa-chevron-right"></span>
+					<span class="title">Archétypes</span>
+				</button>
+			</div>
+			<div id="blueprint-archetypes" class="collapse {{#if display.blueprint-archetypes}}show{{/if}}" data-parent="#accordion-blueprint">
+				<div class="card-body">
+					<div class="quickstart-only unique-values">
+						<div class="form-group">
+							<label>Meilleur</label>
+							<select class="form-control" name="archetypes.quickstart[0].ability" ability="{{blueprint.archetypes.quickstart.[0].ability}}">
+								<option value="fig" {{selected blueprint.archetypes.quickstart.[0].ability "str"}}>Guerrier</option>
+								<option value="rog" {{selected blueprint.archetypes.quickstart.[0].ability "dex"}}>Escroc</option>
+								<option value="exp" {{selected blueprint.archetypes.quickstart.[0].ability "con"}}>Explorateur</option>
+								<option value="sag" {{selected blueprint.archetypes.quickstart.[0].ability "int"}}>Érudit</option>
+								<option value="art" {{selected blueprint.archetypes.quickstart.[0].ability "wis"}}>Artiste</option>
+								<option value="dip" {{selected blueprint.archetypes.quickstart.[0].ability "cha"}}>Diplomate</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>2ème</label>
+							<select class="form-control" name="archetypes.quickstart[1].ability" ability="{{blueprint.archetypes.quickstart.[1].ability}}">
+								<option value="fig" {{selected blueprint.archetypes.quickstart.[1].ability "str"}}>Guerrier</option>
+								<option value="rog" {{selected blueprint.archetypes.quickstart.[1].ability "dex"}}>Escroc</option>
+								<option value="exp" {{selected blueprint.archetypes.quickstart.[1].ability "con"}}>Explorateur</option>
+								<option value="sag" {{selected blueprint.archetypes.quickstart.[1].ability "int"}}>Érudit</option>
+								<option value="art" {{selected blueprint.archetypes.quickstart.[1].ability "wis"}}>Artiste</option>
+								<option value="dip" {{selected blueprint.archetypes.quickstart.[1].ability "cha"}}>Diplomate</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>3ème</label>
+							<select class="form-control" name="archetypes.quickstart[2].ability" ability="{{blueprint.archetypes.quickstart.[2].ability}}">
+								<option value="fig" {{selected blueprint.archetypes.quickstart.[2].ability "str"}}>Guerrier</option>
+								<option value="rog" {{selected blueprint.archetypes.quickstart.[2].ability "dex"}}>Escroc</option>
+								<option value="exp" {{selected blueprint.archetypes.quickstart.[2].ability "con"}}>Explorateur</option>
+								<option value="sag" {{selected blueprint.archetypes.quickstart.[2].ability "int"}}>Érudit</option>
+								<option value="art" {{selected blueprint.archetypes.quickstart.[2].ability "wis"}}>Artiste</option>
+								<option value="dip" {{selected blueprint.archetypes.quickstart.[2].ability "cha"}}>Diplomate</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>4ème</label>
+							<select class="form-control" name="archetypes.quickstart[3].ability" ability="{{blueprint.archetypes.quickstart.[3].ability}}">
+								<option value="fig" {{selected blueprint.archetypes.quickstart.[3].ability "str"}}>Guerrier</option>
+								<option value="rog" {{selected blueprint.archetypes.quickstart.[3].ability "dex"}}>Escroc</option>
+								<option value="exp" {{selected blueprint.archetypes.quickstart.[3].ability "con"}}>Explorateur</option>
+								<option value="sag" {{selected blueprint.archetypes.quickstart.[3].ability "int"}}>Érudit</option>
+								<option value="art" {{selected blueprint.archetypes.quickstart.[3].ability "wis"}}>Artiste</option>
+								<option value="dip" {{selected blueprint.archetypes.quickstart.[3].ability "cha"}}>Diplomate</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>5ème</label>
+							<select class="form-control" name="archetypes.quickstart[4].ability" ability="{{blueprint.archetypes.quickstart.[4].ability}}">
+								<option value="fig" {{selected blueprint.archetypes.quickstart.[4].ability "str"}}>Guerrier</option>
+								<option value="rog" {{selected blueprint.archetypes.quickstart.[4].ability "dex"}}>Escroc</option>
+								<option value="exp" {{selected blueprint.archetypes.quickstart.[4].ability "con"}}>Explorateur</option>
+								<option value="sag" {{selected blueprint.archetypes.quickstart.[4].ability "int"}}>Érudit</option>
+								<option value="art" {{selected blueprint.archetypes.quickstart.[4].ability "wis"}}>Artiste</option>
+								<option value="dip" {{selected blueprint.archetypes.quickstart.[4].ability "cha"}}>Diplomate</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Pire</label>
+							<select class="form-control" name="archetypes.quickstart[5].ability" ability="{{blueprint.archetypes.quickstart.[5].ability}}">
+								<option value="fig" {{selected blueprint.archetypes.quickstart.[5].ability "str"}}>Guerrier</option>
+								<option value="rog" {{selected blueprint.archetypes.quickstart.[5].ability "dex"}}>Escroc</option>
+								<option value="exp" {{selected blueprint.archetypes.quickstart.[5].ability "con"}}>Explorateur</option>
+								<option value="sag" {{selected blueprint.archetypes.quickstart.[5].ability "int"}}>Érudit</option>
+								<option value="art" {{selected blueprint.archetypes.quickstart.[5].ability "wis"}}>Artiste</option>
+								<option value="dip" {{selected blueprint.archetypes.quickstart.[5].ability "cha"}}>Diplomate</option>
+							</select>
+						</div>
+					</div>
+					<div class="manual-only">
+						<div class="form-group">
+							<label>Force</label>
+							<input type="number" class="form-control" name="archetypes.fig" placeholder="0" min="0" {{{setValue blueprint.archetypes.fig}}}>
+						</div>
+						<div class="form-group">
+							<label>Dextérité</label>
+							<input type="number" class="form-control" name="archetypes.rog" placeholder="0" min="0" {{{setValue blueprint.archetypes.rog}}}>
+						</div>
+						<div class="form-group">
+							<label>Constitution</label>
+							<input type="number" class="form-control" name="archetypes.exp" placeholder="0" min="0" {{{setValue blueprint.archetypes.exp}}}>
+						</div>
+						<div class="form-group">
+							<label>Intelligence</label>
+							<input type="number" class="form-control" name="archetypes.sag" placeholder="0" min="0" {{{setValue blueprint.archetypes.sag}}}>
+						</div>
+						<div class="form-group">
+							<label>Sagesse</label>
+							<input type="number" class="form-control" name="archetypes.art" placeholder="0" min="0" {{{setValue blueprint.archetypes.art}}}>
+						</div>
+						<div class="form-group">
+							<label>Charisme</label>
+							<input type="number" class="form-control" name="archetypes.dip" placeholder="0" min="0" {{{setValue blueprint.archetypes.dip}}}>
 						</div>
 					</div>
 				</div>
@@ -403,67 +509,67 @@
 					<div class="form-group custom">
 						<label>1st (Best)</label>
 						<select class="form-control" name="savingThrows.quickstart[0].ability" ability="{{blueprint.savingThrows.quickstart.[0].ability}}">
-							<option value="str" {{selected blueprint.savingThrows.quickstart.[0].ability "str"}}>Strength</option>
-							<option value="dex" {{selected blueprint.savingThrows.quickstart.[0].ability "dex"}}>Dexterity</option>
+							<option value="str" {{selected blueprint.savingThrows.quickstart.[0].ability "str"}}>Force</option>
+							<option value="dex" {{selected blueprint.savingThrows.quickstart.[0].ability "dex"}}>Dextérité</option>
 							<option value="con" {{selected blueprint.savingThrows.quickstart.[0].ability "con"}}>Constitution</option>
 							<option value="int" {{selected blueprint.savingThrows.quickstart.[0].ability "int"}}>Intelligence</option>
-							<option value="wis" {{selected blueprint.savingThrows.quickstart.[0].ability "wis"}}>Wisdom</option>
-							<option value="cha" {{selected blueprint.savingThrows.quickstart.[0].ability "cha"}}>Charisma</option>
+							<option value="wis" {{selected blueprint.savingThrows.quickstart.[0].ability "wis"}}>Sagesse</option>
+							<option value="cha" {{selected blueprint.savingThrows.quickstart.[0].ability "cha"}}>Charisme</option>
 						</select>
 					</div>
 					<div class="form-group custom">
 						<label>2nd</label>
 						<select class="form-control" name="savingThrows.quickstart[1].ability" ability="{{blueprint.savingThrows.quickstart.[1].ability}}">
-							<option value="str" {{selected blueprint.savingThrows.quickstart.[1].ability "str"}}>Strength</option>
-							<option value="dex" {{selected blueprint.savingThrows.quickstart.[1].ability "dex"}}>Dexterity</option>
+							<option value="str" {{selected blueprint.savingThrows.quickstart.[1].ability "str"}}>Force</option>
+							<option value="dex" {{selected blueprint.savingThrows.quickstart.[1].ability "dex"}}>Dextérité</option>
 							<option value="con" {{selected blueprint.savingThrows.quickstart.[1].ability "con"}}>Constitution</option>
 							<option value="int" {{selected blueprint.savingThrows.quickstart.[1].ability "int"}}>Intelligence</option>
-							<option value="wis" {{selected blueprint.savingThrows.quickstart.[1].ability "wis"}}>Wisdom</option>
-							<option value="cha" {{selected blueprint.savingThrows.quickstart.[1].ability "cha"}}>Charisma</option>
+							<option value="wis" {{selected blueprint.savingThrows.quickstart.[1].ability "wis"}}>Sagesse</option>
+							<option value="cha" {{selected blueprint.savingThrows.quickstart.[1].ability "cha"}}>Charisme</option>
 						</select>
 					</div>
 					<div class="form-group custom">
 						<label>3rd</label>
 						<select class="form-control" name="savingThrows.quickstart[2].ability" ability="{{blueprint.savingThrows.quickstart.[2].ability}}">
-							<option value="str" {{selected blueprint.savingThrows.quickstart.[2].ability "str"}}>Strength</option>
-							<option value="dex" {{selected blueprint.savingThrows.quickstart.[2].ability "dex"}}>Dexterity</option>
+							<option value="str" {{selected blueprint.savingThrows.quickstart.[2].ability "str"}}>Force</option>
+							<option value="dex" {{selected blueprint.savingThrows.quickstart.[2].ability "dex"}}>Dextérité</option>
 							<option value="con" {{selected blueprint.savingThrows.quickstart.[2].ability "con"}}>Constitution</option>
 							<option value="int" {{selected blueprint.savingThrows.quickstart.[2].ability "int"}}>Intelligence</option>
-							<option value="wis" {{selected blueprint.savingThrows.quickstart.[2].ability "wis"}}>Wisdom</option>
-							<option value="cha" {{selected blueprint.savingThrows.quickstart.[2].ability "cha"}}>Charisma</option>
+							<option value="wis" {{selected blueprint.savingThrows.quickstart.[2].ability "wis"}}>Sagesse</option>
+							<option value="cha" {{selected blueprint.savingThrows.quickstart.[2].ability "cha"}}>Charisme</option>
 						</select>
 					</div>
 					<div class="form-group custom">
 						<label>4th</label>
 						<select class="form-control" name="savingThrows.quickstart[3].ability" ability="{{blueprint.savingThrows.quickstart.[3].ability}}">
-							<option value="str" {{selected blueprint.savingThrows.quickstart.[3].ability "str"}}>Strength</option>
-							<option value="dex" {{selected blueprint.savingThrows.quickstart.[3].ability "dex"}}>Dexterity</option>
+							<option value="str" {{selected blueprint.savingThrows.quickstart.[3].ability "str"}}>Force</option>
+							<option value="dex" {{selected blueprint.savingThrows.quickstart.[3].ability "dex"}}>Dextérité</option>
 							<option value="con" {{selected blueprint.savingThrows.quickstart.[3].ability "con"}}>Constitution</option>
 							<option value="int" {{selected blueprint.savingThrows.quickstart.[3].ability "int"}}>Intelligence</option>
-							<option value="wis" {{selected blueprint.savingThrows.quickstart.[3].ability "wis"}}>Wisdom</option>
-							<option value="cha" {{selected blueprint.savingThrows.quickstart.[3].ability "cha"}}>Charisma</option>
+							<option value="wis" {{selected blueprint.savingThrows.quickstart.[3].ability "wis"}}>Sagesse</option>
+							<option value="cha" {{selected blueprint.savingThrows.quickstart.[3].ability "cha"}}>Charisme</option>
 						</select>
 					</div>
 					<div class="form-group custom">
 						<label>5th</label>
 						<select class="form-control" name="savingThrows.quickstart[4].ability" ability="{{blueprint.savingThrows.quickstart.[4].ability}}">
-							<option value="str" {{selected blueprint.savingThrows.quickstart.[4].ability "str"}}>Strength</option>
-							<option value="dex" {{selected blueprint.savingThrows.quickstart.[4].ability "dex"}}>Dexterity</option>
+							<option value="str" {{selected blueprint.savingThrows.quickstart.[4].ability "str"}}>Force</option>
+							<option value="dex" {{selected blueprint.savingThrows.quickstart.[4].ability "dex"}}>Dextérité</option>
 							<option value="con" {{selected blueprint.savingThrows.quickstart.[4].ability "con"}}>Constitution</option>
 							<option value="int" {{selected blueprint.savingThrows.quickstart.[4].ability "int"}}>Intelligence</option>
-							<option value="wis" {{selected blueprint.savingThrows.quickstart.[4].ability "wis"}}>Wisdom</option>
-							<option value="cha" {{selected blueprint.savingThrows.quickstart.[4].ability "cha"}}>Charisma</option>
+							<option value="wis" {{selected blueprint.savingThrows.quickstart.[4].ability "wis"}}>Sagesse</option>
+							<option value="cha" {{selected blueprint.savingThrows.quickstart.[4].ability "cha"}}>Charisme</option>
 						</select>
 					</div>
 					<div class="form-group custom">
 						<label>6th (Worst)</label>
 						<select class="form-control" name="savingThrows.quickstart[5].ability" ability="{{blueprint.savingThrows.quickstart.[5].ability}}">
-							<option value="str" {{selected blueprint.savingThrows.quickstart.[5].ability "str"}}>Strength</option>
-							<option value="dex" {{selected blueprint.savingThrows.quickstart.[5].ability "dex"}}>Dexterity</option>
+							<option value="str" {{selected blueprint.savingThrows.quickstart.[5].ability "str"}}>Force</option>
+							<option value="dex" {{selected blueprint.savingThrows.quickstart.[5].ability "dex"}}>Dextérité</option>
 							<option value="con" {{selected blueprint.savingThrows.quickstart.[5].ability "con"}}>Constitution</option>
 							<option value="int" {{selected blueprint.savingThrows.quickstart.[5].ability "int"}}>Intelligence</option>
-							<option value="wis" {{selected blueprint.savingThrows.quickstart.[5].ability "wis"}}>Wisdom</option>
-							<option value="cha" {{selected blueprint.savingThrows.quickstart.[5].ability "cha"}}>Charisma</option>
+							<option value="wis" {{selected blueprint.savingThrows.quickstart.[5].ability "wis"}}>Sagesse</option>
+							<option value="cha" {{selected blueprint.savingThrows.quickstart.[5].ability "cha"}}>Charisme</option>
 						</select>
 					</div>
 				</div>
@@ -1109,14 +1215,14 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title">
-					<span class="card-icon fas fa-question"></span> Image URL
+					<span class="card-icon fas fa-question"></span> URL de l'image
 				</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
-				<p>If you want to export your monster as a PNG, your image must come from a CORS-compliant website (such as <strong>Imgur</strong>).</p>
+				<p>Si vous souhaitez exporter votre monstre au format PNG, votre image doit provenir d'un site web compatible CORS (tel que <strong>Imgur</strong>).</p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-primary" data-dismiss="modal">
@@ -1131,14 +1237,14 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title">
-					<span class="card-icon fas fa-question"></span> Display Theme
+					<span class="card-icon fas fa-question"></span> Thème d'affichage
 				</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
-				<p>You can change the default display theme for all monsters in the <strong>settings menu</strong> (<a href="#" class="btn-open-settings">open menu</a>). Alternatively, you can set a specific override for individual monsters with the <strong>Theme</strong> display option.</p>
+				<p>Vous pouvez changer le thème d'affichage par défaut pour tous les monstres dans le <strong>menu des paramètres</strong> (<a href="#" class="btn-open-settings">ouvrir le menu</a>). Alternativement, vous pouvez définir un remplacement spécifique pour des monstres individuels avec l'option d'affichage <strong>Thème</strong>.</p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-primary" data-dismiss="modal">
