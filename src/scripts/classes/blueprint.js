@@ -64,7 +64,7 @@ class Blueprint {
         { ability: "cha" },
       ],
     };
-    this.abilities = {
+    this.archetypes = {
       fig: 10,
       rog: 10,
       exp: 10,
@@ -153,6 +153,13 @@ class Blueprint {
           })
         : this.abilities.quickstart;
     this.abilities.quickstart = abilitiesQuickstart;
+    let archetypesQuickstart =
+      options.archetypes && Array.isArray(options.archetypes)
+        ? options.archetypes.map(function (archetype) {
+            return { archetype: archetype };
+          })
+        : this.archetypes.quickstart;
+    this.archetypes.quickstart = archetypesQuickstart;
     this.traits = parseArray(options.traits, function (trait) {
       return {
         name: parseString(trait.name),
@@ -302,6 +309,34 @@ class Blueprint {
       quickstart: parseArray(abilitiesQuickstart, function (ability) {
         return {
           ability: parseString(ability.ability),
+        };
+      }),
+    };
+    let archetypesQuickstart = options.archetypes
+      ? options.archetypes.quickstart
+      : this.archetypes.quickstart;
+    this.archetypes = {
+      fig: options.archetypes
+        ? parseNumber(options.archetypes.fig)
+        : this.archetypes.fig,
+      rog: options.archetypes
+        ? parseNumber(options.archetypes.rog)
+        : this.archetypes.rog,
+      exp: options.archetypes
+        ? parseNumber(options.archetypes.exp)
+        : this.archetypes.exp,
+      sag: options.archetypes
+        ? parseNumber(options.archetypes.sag)
+        : this.archetypes.sag,
+      art: options.archetypes
+        ? parseNumber(options.archetypes.art)
+        : this.archetypes.art,
+      dip: options.archetypes
+        ? parseNumber(options.archetypes.dip)
+        : this.archetypes.dip,
+      quickstart: parseArray(archetypesQuickstart, function (archetype) {
+        return {
+          archetype: parseString(archetype.archetype),
         };
       }),
     };
@@ -708,6 +743,68 @@ class Blueprint {
 
   getAbilityQuickstartRank(ability) {
     return this.abilities.quickstart.findIndex((x) => x.ability == ability);
+  }
+
+  getArchetypes() {
+    return this.archetypes;
+  }
+
+  getArchetypeFig() {
+    return this.archetypes.fig;
+  }
+
+  setArchetypeFig(archetype) {
+    this.archetypes.fig = archetype;
+  }
+
+  getArchetypeRog() {
+    return this.archetypes.dex;
+  }
+
+  setArchetypeRog(archetype) {
+    this.archetypes.rog = archetype;
+  }
+
+  getArchetypeExp() {
+    return this.archetypes.exp;
+  }
+
+  setArchetypeExp(archetype) {
+    this.archetypes.exp = archetype;
+  }
+
+  getArchetypeSag() {
+    return this.archetypes.sag;
+  }
+
+  setArchetypeSag(archetype) {
+    this.archetypes.sag = archetype;
+  }
+
+  getArchetypeArt() {
+    return this.archetypes.art;
+  }
+
+  setArchetypeArt(archetype) {
+    this.archetypes.art = archetype;
+  }
+
+  getArchetypeDip() {
+    return this.archetypes.dip;
+  }
+
+  setArchetypeDip(archetype) {
+    this.archetypes.dip = archetype;
+  }
+
+  getArchetypeQuickstart() {
+    return this.archetypes.quickstart;
+  }
+
+  getArchetypeQuickstartRank(archetype) {
+    return this.archetypes.quickstart.findIndex(
+      (x) => x.archetype == archetype
+    );
   }
 
   getSkills() {

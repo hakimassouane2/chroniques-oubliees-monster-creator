@@ -302,51 +302,51 @@ class Monster {
   }
 
   getArchetypeFig() {
-    return this.archetype.fig;
+    return this.archetypes.fig;
   }
 
   setArchetypeFig(fig) {
-    this.archetype.fig = fig;
+    this.archetypes.fig = fig;
   }
 
   getArchetypeRog() {
-    return this.archetype.rog;
+    return this.archetypes.rog;
   }
 
   setArchetypeRog(rog) {
-    this.archetype.rog = rog;
+    this.archetypes.rog = rog;
   }
 
   getArchetypeExp() {
-    return this.archetype.exp;
+    return this.archetypes.exp;
   }
 
   setArchetypeExp(exp) {
-    this.archetype.exp = exp;
+    this.archetypes.exp = exp;
   }
 
   getArchetypeSag() {
-    return this.archetype.sag;
+    return this.archetypes.sag;
   }
 
   setArchetypeSag(sag) {
-    this.archetype.sag = sag;
+    this.archetypes.sag = sag;
   }
 
   getArchetypeArt() {
-    return this.archetype.art;
+    return this.archetypes.art;
   }
 
   setArchetypeArt(art) {
-    this.archetype.art = art;
+    this.archetypes.art = art;
   }
 
   getArchetypeDip() {
-    return this.archetype.dip;
+    return this.archetypes.dip;
   }
 
   setArchetypeDip(dip) {
-    this.archetype.dip = dip;
+    this.archetypes.dip = dip;
   }
 
   getSkills() {

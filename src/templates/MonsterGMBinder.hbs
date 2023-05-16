@@ -16,7 +16,14 @@ ___ > ##
 ({{{fmtModifier abilities.con.modifier}}})|{{abilities.int.score}}
 ({{{fmtModifier abilities.int.modifier}}})|{{abilities.wis.score}}
 ({{{fmtModifier abilities.wis.modifier}}})|{{abilities.cha.score}}
-({{{fmtModifier abilities.cha.modifier}}})| > ___
+({{{fmtModifier abilities.cha.modifier}}})| > ___ > ___ >
+|FIG|ROG|EXP|SAG|ART|DIP| > |:---:|:---:|:---:|:---:|:---:|:---:| > |{{archetypes.fig.score}}
+({{{fmtModifier archetypes.fig.modifier}}})|{{abilities.rog.score}}
+({{{fmtModifier archetypes.rog.modifier}}})|{{abilities.exp.score}}
+({{{fmtModifier archetypes.exp.modifier}}})|{{abilities.sag.score}}
+({{{fmtModifier archetypes.sag.modifier}}})|{{abilities.art.score}}
+({{{fmtModifier archetypes.art.modifier}}})|{{abilities.dip.score}}
+({{{fmtModifier archetypes.dip.modifier}}})| > ___
 {{#if skills}}
   > - **Skills**
   {{#each skills}}{{fmtCapitalise name}}

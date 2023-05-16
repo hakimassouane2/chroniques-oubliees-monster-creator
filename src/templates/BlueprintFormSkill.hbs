@@ -29,20 +29,20 @@
 		<input type="text" class="form-control" data-name="custom.name" {{{setValue custom.name}}}>
 	</div>
 	<div class="form-group custom" {{{customToggle name}}}>
-		<label>Ability</label>
+		<label>Attribut</label>
 		<select class="form-control" data-name="custom.ability">
-			<option value="str" {{selectedDefault custom.ability "str"}}>Strength</option>
-			<option value="dex" {{selected custom.ability "dex"}}>Dexterity</option>
+			<option value="str" {{selectedDefault custom.ability "str"}}>Force</option>
+			<option value="dex" {{selected custom.ability "dex"}}>Dextérité</option>
 			<option value="con" {{selected custom.ability "con"}}>Constitution</option>
 			<option value="int" {{selected custom.ability "int"}}>Intelligence</option>
-			<option value="wis" {{selected custom.ability "wis"}}>Wisdom</option>
-			<option value="cha" {{selected custom.ability "cha"}}>Charisma</option>
+			<option value="wis" {{selected custom.ability "wis"}}>Sagesse</option>
+			<option value="cha" {{selected custom.ability "cha"}}>Charisme</option>
 		</select>
 	</div>
 	<div class="form-group">
 		<label>Maîtrise</label>
 		<select class="form-control" data-name="proficiency">
-			<option value="proficient" {{selectedDefault proficiency "proficient"}}>Proficient</option>
+			<option value="proficient" {{selectedDefault proficiency "proficient"}}>Maîtrise</option>
 			<option value="expertise" {{selected proficiency "expertise"}}>Expertise</option>
 		</select>
 	</div>

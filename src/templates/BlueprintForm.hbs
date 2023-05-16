@@ -255,7 +255,7 @@
 						<input type="text" class="form-control" name="speed.normal" {{{setValue blueprint.speed.normal}}}>
 					</div>
 					<div class="form-group">
-						<label>Creusement </label>
+						<label>Creusement</label>
 						<input type="text" class="form-control" name="speed.burrow" {{{setValue blueprint.speed.burrow}}}>
 					</div>
 					<div class="form-group">
@@ -286,7 +286,7 @@
 			</div>
 			<div id="blueprint-abilities" class="collapse {{#if display.blueprint-abilities}}show{{/if}}" data-parent="#accordion-blueprint">
 				<div class="card-body">
-					<div class="quickstart-only unique-values">
+					<div class="quickstart-only unique-values abilities">
 						<div class="form-group">
 							<label>Meilleur</label>
 							<select class="form-control" name="abilities.quickstart[0].ability" ability="{{blueprint.abilities.quickstart.[0].ability}}">
@@ -301,7 +301,7 @@
 						<div class="form-group">
 							<label>2ème</label>
 							<select class="form-control" name="abilities.quickstart[1].ability" ability="{{blueprint.abilities.quickstart.[1].ability}}">
-								<option value="str" {{selected blueprint.abilities.quickstart.[1].ability "str"}}></option>
+								<option value="str" {{selected blueprint.abilities.quickstart.[1].ability "str"}}>Force</option>
 								<option value="dex" {{selected blueprint.abilities.quickstart.[1].ability "dex"}}>Dextérité</option>
 								<option value="con" {{selected blueprint.abilities.quickstart.[1].ability "con"}}>Constitution</option>
 								<option value="int" {{selected blueprint.abilities.quickstart.[1].ability "int"}}>Intelligence</option>
@@ -392,97 +392,97 @@
 			</div>
 			<div id="blueprint-archetypes" class="collapse {{#if display.blueprint-archetypes}}show{{/if}}" data-parent="#accordion-blueprint">
 				<div class="card-body">
-					<div class="quickstart-only unique-values">
+					<div class="quickstart-only unique-values archetypes">
 						<div class="form-group">
 							<label>Meilleur</label>
-							<select class="form-control" name="archetypes.quickstart[0].ability" ability="{{blueprint.archetypes.quickstart.[0].ability}}">
-								<option value="fig" {{selected blueprint.archetypes.quickstart.[0].ability "str"}}>Guerrier</option>
-								<option value="rog" {{selected blueprint.archetypes.quickstart.[0].ability "dex"}}>Escroc</option>
-								<option value="exp" {{selected blueprint.archetypes.quickstart.[0].ability "con"}}>Explorateur</option>
-								<option value="sag" {{selected blueprint.archetypes.quickstart.[0].ability "int"}}>Érudit</option>
-								<option value="art" {{selected blueprint.archetypes.quickstart.[0].ability "wis"}}>Artiste</option>
-								<option value="dip" {{selected blueprint.archetypes.quickstart.[0].ability "cha"}}>Diplomate</option>
+							<select class="form-control" name="archetypes.quickstart[0].archetype" archetype="{{blueprint.archetypes.quickstart.[0].archetype}}">
+								<option value="fig" {{selected blueprint.archetypes.quickstart.[0].archetype "fig"}}>Guerrier</option>
+								<option value="rog" {{selected blueprint.archetypes.quickstart.[0].archetype "rog"}}>Escroc</option>
+								<option value="exp" {{selected blueprint.archetypes.quickstart.[0].archetype "exp"}}>Explorateur</option>
+								<option value="sag" {{selected blueprint.archetypes.quickstart.[0].archetype "sag"}}>Érudit</option>
+								<option value="art" {{selected blueprint.archetypes.quickstart.[0].archetype "art"}}>Artiste</option>
+								<option value="dip" {{selected blueprint.archetypes.quickstart.[0].archetype "dip"}}>Diplomate</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label>2ème</label>
-							<select class="form-control" name="archetypes.quickstart[1].ability" ability="{{blueprint.archetypes.quickstart.[1].ability}}">
-								<option value="fig" {{selected blueprint.archetypes.quickstart.[1].ability "str"}}>Guerrier</option>
-								<option value="rog" {{selected blueprint.archetypes.quickstart.[1].ability "dex"}}>Escroc</option>
-								<option value="exp" {{selected blueprint.archetypes.quickstart.[1].ability "con"}}>Explorateur</option>
-								<option value="sag" {{selected blueprint.archetypes.quickstart.[1].ability "int"}}>Érudit</option>
-								<option value="art" {{selected blueprint.archetypes.quickstart.[1].ability "wis"}}>Artiste</option>
-								<option value="dip" {{selected blueprint.archetypes.quickstart.[1].ability "cha"}}>Diplomate</option>
+							<select class="form-control" name="archetypes.quickstart[1].archetype" archetype="{{blueprint.archetypes.quickstart.[1].archetype}}">
+								<option value="fig" {{selected blueprint.archetypes.quickstart.[1].archetype "fig"}}>Guerrier</option>
+								<option value="rog" {{selected blueprint.archetypes.quickstart.[1].archetype "rog"}}>Escroc</option>
+								<option value="exp" {{selected blueprint.archetypes.quickstart.[1].archetype "exp"}}>Explorateur</option>
+								<option value="sag" {{selected blueprint.archetypes.quickstart.[1].archetype "sag"}}>Érudit</option>
+								<option value="art" {{selected blueprint.archetypes.quickstart.[1].archetype "art"}}>Artiste</option>
+								<option value="dip" {{selected blueprint.archetypes.quickstart.[1].archetype "dip"}}>Diplomate</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label>3ème</label>
-							<select class="form-control" name="archetypes.quickstart[2].ability" ability="{{blueprint.archetypes.quickstart.[2].ability}}">
-								<option value="fig" {{selected blueprint.archetypes.quickstart.[2].ability "str"}}>Guerrier</option>
-								<option value="rog" {{selected blueprint.archetypes.quickstart.[2].ability "dex"}}>Escroc</option>
-								<option value="exp" {{selected blueprint.archetypes.quickstart.[2].ability "con"}}>Explorateur</option>
-								<option value="sag" {{selected blueprint.archetypes.quickstart.[2].ability "int"}}>Érudit</option>
-								<option value="art" {{selected blueprint.archetypes.quickstart.[2].ability "wis"}}>Artiste</option>
-								<option value="dip" {{selected blueprint.archetypes.quickstart.[2].ability "cha"}}>Diplomate</option>
+							<select class="form-control" name="archetypes.quickstart[2].archetype" archetype="{{blueprint.archetypes.quickstart.[2].archetype}}">
+								<option value="fig" {{selected blueprint.archetypes.quickstart.[2].archetype "fig"}}>Guerrier</option>
+								<option value="rog" {{selected blueprint.archetypes.quickstart.[2].archetype "rog"}}>Escroc</option>
+								<option value="exp" {{selected blueprint.archetypes.quickstart.[2].archetype "exp"}}>Explorateur</option>
+								<option value="sag" {{selected blueprint.archetypes.quickstart.[2].archetype "sag"}}>Érudit</option>
+								<option value="art" {{selected blueprint.archetypes.quickstart.[2].archetype "art"}}>Artiste</option>
+								<option value="dip" {{selected blueprint.archetypes.quickstart.[2].archetype "dip"}}>Diplomate</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label>4ème</label>
-							<select class="form-control" name="archetypes.quickstart[3].ability" ability="{{blueprint.archetypes.quickstart.[3].ability}}">
-								<option value="fig" {{selected blueprint.archetypes.quickstart.[3].ability "str"}}>Guerrier</option>
-								<option value="rog" {{selected blueprint.archetypes.quickstart.[3].ability "dex"}}>Escroc</option>
-								<option value="exp" {{selected blueprint.archetypes.quickstart.[3].ability "con"}}>Explorateur</option>
-								<option value="sag" {{selected blueprint.archetypes.quickstart.[3].ability "int"}}>Érudit</option>
-								<option value="art" {{selected blueprint.archetypes.quickstart.[3].ability "wis"}}>Artiste</option>
-								<option value="dip" {{selected blueprint.archetypes.quickstart.[3].ability "cha"}}>Diplomate</option>
+							<select class="form-control" name="archetypes.quickstart[3].archetype" archetype="{{blueprint.archetypes.quickstart.[3].archetype}}">
+								<option value="fig" {{selected blueprint.archetypes.quickstart.[3].archetype "fig"}}>Guerrier</option>
+								<option value="rog" {{selected blueprint.archetypes.quickstart.[3].archetype "rog"}}>Escroc</option>
+								<option value="exp" {{selected blueprint.archetypes.quickstart.[3].archetype "exp"}}>Explorateur</option>
+								<option value="sag" {{selected blueprint.archetypes.quickstart.[3].archetype "sag"}}>Érudit</option>
+								<option value="art" {{selected blueprint.archetypes.quickstart.[3].archetype "art"}}>Artiste</option>
+								<option value="dip" {{selected blueprint.archetypes.quickstart.[3].archetype "dip"}}>Diplomate</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label>5ème</label>
-							<select class="form-control" name="archetypes.quickstart[4].ability" ability="{{blueprint.archetypes.quickstart.[4].ability}}">
-								<option value="fig" {{selected blueprint.archetypes.quickstart.[4].ability "str"}}>Guerrier</option>
-								<option value="rog" {{selected blueprint.archetypes.quickstart.[4].ability "dex"}}>Escroc</option>
-								<option value="exp" {{selected blueprint.archetypes.quickstart.[4].ability "con"}}>Explorateur</option>
-								<option value="sag" {{selected blueprint.archetypes.quickstart.[4].ability "int"}}>Érudit</option>
-								<option value="art" {{selected blueprint.archetypes.quickstart.[4].ability "wis"}}>Artiste</option>
-								<option value="dip" {{selected blueprint.archetypes.quickstart.[4].ability "cha"}}>Diplomate</option>
+							<select class="form-control" name="archetypes.quickstart[4].archetype" archetype="{{blueprint.archetypes.quickstart.[4].archetype}}">
+								<option value="fig" {{selected blueprint.archetypes.quickstart.[4].archetype "fig"}}>Guerrier</option>
+								<option value="rog" {{selected blueprint.archetypes.quickstart.[4].archetype "rog"}}>Escroc</option>
+								<option value="exp" {{selected blueprint.archetypes.quickstart.[4].archetype "exp"}}>Explorateur</option>
+								<option value="sag" {{selected blueprint.archetypes.quickstart.[4].archetype "sag"}}>Érudit</option>
+								<option value="art" {{selected blueprint.archetypes.quickstart.[4].archetype "art"}}>Artiste</option>
+								<option value="dip" {{selected blueprint.archetypes.quickstart.[4].archetype "dip"}}>Diplomate</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label>Pire</label>
-							<select class="form-control" name="archetypes.quickstart[5].ability" ability="{{blueprint.archetypes.quickstart.[5].ability}}">
-								<option value="fig" {{selected blueprint.archetypes.quickstart.[5].ability "str"}}>Guerrier</option>
-								<option value="rog" {{selected blueprint.archetypes.quickstart.[5].ability "dex"}}>Escroc</option>
-								<option value="exp" {{selected blueprint.archetypes.quickstart.[5].ability "con"}}>Explorateur</option>
-								<option value="sag" {{selected blueprint.archetypes.quickstart.[5].ability "int"}}>Érudit</option>
-								<option value="art" {{selected blueprint.archetypes.quickstart.[5].ability "wis"}}>Artiste</option>
-								<option value="dip" {{selected blueprint.archetypes.quickstart.[5].ability "cha"}}>Diplomate</option>
+							<select class="form-control" name="archetypes.quickstart[5].archetype" archetype="{{blueprint.archetypes.quickstart.[5].archetype}}">
+								<option value="fig" {{selected blueprint.archetypes.quickstart.[5].archetype "fig"}}>Guerrier</option>
+								<option value="rog" {{selected blueprint.archetypes.quickstart.[5].archetype "rog"}}>Escroc</option>
+								<option value="exp" {{selected blueprint.archetypes.quickstart.[5].archetype "exp"}}>Explorateur</option>
+								<option value="sag" {{selected blueprint.archetypes.quickstart.[5].archetype "sag"}}>Érudit</option>
+								<option value="art" {{selected blueprint.archetypes.quickstart.[5].archetype "art"}}>Artiste</option>
+								<option value="dip" {{selected blueprint.archetypes.quickstart.[5].archetype "dip"}}>Diplomate</option>
 							</select>
 						</div>
 					</div>
 					<div class="manual-only">
 						<div class="form-group">
-							<label>Force</label>
+							<label>Guerrier</label>
 							<input type="number" class="form-control" name="archetypes.fig" placeholder="0" min="0" {{{setValue blueprint.archetypes.fig}}}>
 						</div>
 						<div class="form-group">
-							<label>Dextérité</label>
+							<label>Escroc</label>
 							<input type="number" class="form-control" name="archetypes.rog" placeholder="0" min="0" {{{setValue blueprint.archetypes.rog}}}>
 						</div>
 						<div class="form-group">
-							<label>Constitution</label>
+							<label>Explorateur</label>
 							<input type="number" class="form-control" name="archetypes.exp" placeholder="0" min="0" {{{setValue blueprint.archetypes.exp}}}>
 						</div>
 						<div class="form-group">
-							<label>Intelligence</label>
+							<label>Érudit</label>
 							<input type="number" class="form-control" name="archetypes.sag" placeholder="0" min="0" {{{setValue blueprint.archetypes.sag}}}>
 						</div>
 						<div class="form-group">
-							<label>Sagesse</label>
+							<label>Artiste</label>
 							<input type="number" class="form-control" name="archetypes.art" placeholder="0" min="0" {{{setValue blueprint.archetypes.art}}}>
 						</div>
 						<div class="form-group">
-							<label>Charisme</label>
+							<label>Diplomate</label>
 							<input type="number" class="form-control" name="archetypes.dip" placeholder="0" min="0" {{{setValue blueprint.archetypes.dip}}}>
 						</div>
 					</div>

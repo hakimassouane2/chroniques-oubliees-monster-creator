@@ -177,6 +177,30 @@ const Frankenstein = (function () {
       monster["setAbility" + field](ability);
     });
 
+    // Set archetype scores and modifiers
+    ["Fig", "Rog", "Exp", "Sag", "Art", "Dip"].forEach(function (field) {
+      let archetype = null;
+      if (blueprint.getMethod() == "quickstart") {
+        let modifier = quickstarter.getArchetype(
+          blueprint.getArchetypeQuickstartRank(field.toLowerCase())
+        );
+        archetype = {
+          score: modifier * 2 + 10,
+          modifier: modifier,
+        };
+      } else {
+        let score =
+          blueprint["getArchetype" + field]() == null
+            ? 0
+            : blueprint["getArchetype" + field]();
+        archetype = {
+          score: score,
+          modifier: Math.floor((score - 10) / 2),
+        };
+      }
+      monster["setArchetype" + field](archetype);
+    });
+
     // Set challenge
     if (blueprint.getMethod() == "quickstart") {
       monster.setChallengeRating(quickstarter.getChallengeRating());
@@ -578,6 +602,18 @@ const Frankenstein = (function () {
   }
 
   /**
+   * Gets a specified archetype modifier from a monster.
+   * @param {monster} monster - A target monster.
+   * @param {string} archetype - The target archetype (fig, rog, exp, etc).
+   * @return {number} The monster's archetype bonus.
+   */
+  function getMonsterArchetypeModifier(monster, archetype) {
+    let field =
+      "getArchetype" + archetype.charAt(0).toUpperCase() + archetype.slice(1);
+    return monster[field]().modifier;
+  }
+
+  /**
    * Gets a proficiency bonus from a monster.
    * @param {monster} monster - A target monster.
    * @param {string} proficiency - Proficient/Expertise or nothing.
@@ -743,6 +779,55 @@ const Frankenstein = (function () {
       output = output.replace(/\bwis-score\b/g, monster.getAbilityWis().score);
       output = output.replace(/\bcha-mod\b/g, monster.getAbilityCha().modifier);
       output = output.replace(/\bcha-score\b/g, monster.getAbilityCha().score);
+
+      output = output.replace(
+        /\bfig-mod\b/g,
+        monster.getArchetypeFig().modifier
+      );
+      output = output.replace(
+        /\bfig-score\b/g,
+        monster.getArchetypeFig().score
+      );
+      output = output.replace(
+        /\brog-mod\b/g,
+        monster.getArchetypeRog().modifier
+      );
+      output = output.replace(
+        /\brog-score\b/g,
+        monster.getArchetypeRog().score
+      );
+      output = output.replace(
+        /\bexp-mod\b/g,
+        monster.getArchetypeExp().modifier
+      );
+      output = output.replace(
+        /\bexp-score\b/g,
+        monster.getArchetypeExp().score
+      );
+      output = output.replace(
+        /\bsag-mod\b/g,
+        monster.getArchetypeSag().modifier
+      );
+      output = output.replace(
+        /\bsag-score\b/g,
+        monster.getArchetypeSag().score
+      );
+      output = output.replace(
+        /\bart-mod\b/g,
+        monster.getArchetypeArt().modifier
+      );
+      output = output.replace(
+        /\bart-score\b/g,
+        monster.getArchetypeArt().score
+      );
+      output = output.replace(
+        /\bdip-mod\b/g,
+        monster.getArchetypeDip().modifier
+      );
+      output = output.replace(
+        /\bdip-score\b/g,
+        monster.getArchetypeDip().score
+      );
       output = output.replace(
         /\bproficiency\b/g,
         monster.getChallengeProficiency()

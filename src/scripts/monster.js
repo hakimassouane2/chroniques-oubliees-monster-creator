@@ -41,6 +41,14 @@ class Monster {
       wis: null,
       cha: null,
     };
+    this.archetypes = {
+      fig: null,
+      rog: null,
+      exo: null,
+      sag: null,
+      art: null,
+      dip: null,
+    };
     this.skills = [];
     this.vulnerabilities = [];
     this.resistances = [];
@@ -282,6 +290,54 @@ class Monster {
 
   setAbilityCha(cha) {
     this.abilities.cha = cha;
+  }
+
+  getArchetypeFig() {
+    return this.archetypes.fig;
+  }
+
+  setArchetypeFig(fig) {
+    this.archetypes.fig = fig;
+  }
+
+  getArchetypeRog() {
+    return this.archetypes.rog;
+  }
+
+  setArchetypeRog(rog) {
+    this.archetypes.rog = rog;
+  }
+
+  getArchetypeExp() {
+    return this.archetypes.exp;
+  }
+
+  setArchetypeExp(exp) {
+    this.archetypes.exp = exp;
+  }
+
+  getArchetypeSag() {
+    return this.archetypes.sag;
+  }
+
+  setArchetypeSag(sag) {
+    this.archetypes.sag = sag;
+  }
+
+  getArchetypeArt() {
+    return this.archetypes.art;
+  }
+
+  setArchetypeArt(art) {
+    this.archetypes.art = art;
+  }
+
+  getArchetypeDip() {
+    return this.archetypes.dip;
+  }
+
+  setArchetypeDip(dip) {
+    this.archetypes.dip = dip;
   }
 
   getSkills() {
