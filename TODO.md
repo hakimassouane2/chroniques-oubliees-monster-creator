@@ -5,9 +5,10 @@
 - Fix header mobile ✅
 - Translate all app to french ✅
 - Change metadata name of tab ✅
-- Change link in header (redirect to same website)
-- Change logo in header to LVDD logo
-- Change Font-icon
+- Change link in header (redirect to same website) ✅
+- Change logo in header to LVDD logo ✅
+- Change Font-icon ✅
+- Handle Archetype in monster maker ✅
 - Create quete rapide monster template
 - Add new subclasses of classes of monsters
 - Do tables of calculations for quete rapide monsters
