@@ -49,7 +49,17 @@ const Helpers = (function () {
       return capitalise(text);
     });
 
-    Handlebars.registerHelper("fmtCapitaliseRole", function (text) {
+    Handlebars.registerHelper("fmtFormatRank", function (text) {
+      let rankMap = {
+        minion: "Sbire",
+        standard: "Standard",
+        elite: "Élite",
+        solo: "Solo",
+      };
+      return rankMap[text];
+    });
+
+    Handlebars.registerHelper("fmtFormatRole", function (text) {
       let roleMap = {
         controller: "Contrôleur",
         defender: "Défenseur",
@@ -182,14 +192,53 @@ const Helpers = (function () {
    */
   function formatMonsterDescription(size, type, tags, alignment) {
     let output = "";
-    if (size != null) {
-      output += size;
-    }
+    let sizeMap = {
+      tiny: " de taille TP",
+      small: " de taille P",
+      medium: " de taille M",
+      large: " de taille G",
+      huge: " de taille TG",
+      gargantuan: " de taille Gig",
+    };
+
+    let typeMap = {
+      aberration: "Aberration",
+      beast: "Bête",
+      celestial: "Céleste",
+      construct: "Artificiel",
+      dragon: "Dragon",
+      elemental: "Élémentaire",
+      fey: "Fée",
+      fiend: "Fiélon",
+      giant: "Géant",
+      humanoid: "Humanoïde",
+      monstrosity: "Monstruosité",
+      ooze: "Vase",
+      plant: "Plante",
+      undead: "Mort-vivant",
+    };
+
+    let alignmentMap = {
+      "chaotic good": "chaotique bon",
+      "chaotic neutral": "chaotique neutre",
+      "chaotic evil": "chaotique mauvais",
+      "neutral good": "neutre bon",
+      neutral: "neutre",
+      "neutral evil": "neutre mauvais",
+      "lawful good": "loyal bon",
+      "lawful neutral": "loyal neutre",
+      "lawful evil": "loyal mauvais",
+      unaligned: "sans alignement",
+    };
+
     if (type != null) {
       if (output.length != 0) {
         output += " ";
       }
-      output += type;
+      output += typeMap[type];
+    }
+    if (size != null) {
+      output += sizeMap[size];
     }
     if (tags != null && tags.length > 0) {
       if (output.length != 0) {
@@ -208,7 +257,7 @@ const Helpers = (function () {
       if (output.length != 0) {
         output += ", ";
       }
-      output += alignment;
+      output += alignmentMap[alignment];
     }
     return output;
   }
