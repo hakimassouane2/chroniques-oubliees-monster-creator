@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "gulp build",
-    "watch": "gulp build-and-watch"
+    "dev": "gulp build-and-watch"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",

@@ -255,23 +255,23 @@
 						<input type="text" class="form-control" name="speed.normal" {{{setValue blueprint.speed.normal}}}>
 					</div>
 					<div class="form-group">
-						<label>Burrow</label>
+						<label>Creusement </label>
 						<input type="text" class="form-control" name="speed.burrow" {{{setValue blueprint.speed.burrow}}}>
 					</div>
 					<div class="form-group">
-						<label>Climb</label>
+						<label>Escalade</label>
 						<input type="text" class="form-control" name="speed.climb" {{{setValue blueprint.speed.climb}}}>
 					</div>
 					<div class="form-group">
-						<label>Fly</label>
+						<label>Vol</label>
 						<input type="text" class="form-control" name="speed.fly" {{{setValue blueprint.speed.fly}}}>
 					</div>
 					<div class="form-group">
-						<label>Swim</label>
+						<label>Nage</label>
 						<input type="text" class="form-control" name="speed.swim" {{{setValue blueprint.speed.swim}}}>
 					</div>
 					<div class="form-group">
-						<label>Other</label>
+						<label>Autre</label>
 						<input type="text" class="form-control" name="speed.other" {{{setValue blueprint.speed.other}}}>
 					</div>
 				</div>
@@ -288,7 +288,7 @@
 				<div class="card-body">
 					<div class="quickstart-only unique-values">
 						<div class="form-group">
-							<label>1st (Best)</label>
+							<label>1er (Meilleur)</label>
 							<select class="form-control" name="abilities.quickstart[0].ability" ability="{{blueprint.abilities.quickstart.[0].ability}}">
 								<option value="str" {{selected blueprint.abilities.quickstart.[0].ability "str"}}>Strength</option>
 								<option value="dex" {{selected blueprint.abilities.quickstart.[0].ability "dex"}}>Dexterity</option>
@@ -299,7 +299,7 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label>2nd</label>
+							<label>2ème</label>
 							<select class="form-control" name="abilities.quickstart[1].ability" ability="{{blueprint.abilities.quickstart.[1].ability}}">
 								<option value="str" {{selected blueprint.abilities.quickstart.[1].ability "str"}}>Strength</option>
 								<option value="dex" {{selected blueprint.abilities.quickstart.[1].ability "dex"}}>Dexterity</option>
@@ -310,7 +310,7 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label>3rd</label>
+							<label>3ème</label>
 							<select class="form-control" name="abilities.quickstart[2].ability" ability="{{blueprint.abilities.quickstart.[2].ability}}">
 								<option value="str" {{selected blueprint.abilities.quickstart.[2].ability "str"}}>Strength</option>
 								<option value="dex" {{selected blueprint.abilities.quickstart.[2].ability "dex"}}>Dexterity</option>
@@ -321,7 +321,7 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label>4th</label>
+							<label>4ème</label>
 							<select class="form-control" name="abilities.quickstart[3].ability" ability="{{blueprint.abilities.quickstart.[3].ability}}">
 								<option value="str" {{selected blueprint.abilities.quickstart.[3].ability "str"}}>Strength</option>
 								<option value="dex" {{selected blueprint.abilities.quickstart.[3].ability "dex"}}>Dexterity</option>
@@ -332,7 +332,7 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label>5th</label>
+							<label>5ème</label>
 							<select class="form-control" name="abilities.quickstart[4].ability" ability="{{blueprint.abilities.quickstart.[4].ability}}">
 								<option value="str" {{selected blueprint.abilities.quickstart.[4].ability "str"}}>Strength</option>
 								<option value="dex" {{selected blueprint.abilities.quickstart.[4].ability "dex"}}>Dexterity</option>
@@ -343,7 +343,7 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label>6th (Worst)</label>
+							<label>6ème (Pire)</label>
 							<select class="form-control" name="abilities.quickstart[5].ability" ability="{{blueprint.abilities.quickstart.[5].ability}}">
 								<option value="str" {{selected blueprint.abilities.quickstart.[5].ability "str"}}>Strength</option>
 								<option value="dex" {{selected blueprint.abilities.quickstart.[5].ability "dex"}}>Dexterity</option>
@@ -916,16 +916,16 @@
 						</div>
 						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
 							<div class="card-body">
-								<p>You can use some basic <strong>markdown</strong> to add bold and italic formatting to your text blocks.</p>
+								<p>Vous pouvez utiliser du <strong>markdown</strong> pour ajouter des caractères gras et italiques à vos blocs de texte.</p>
 								<table class="table table-default table-bordered">
 									<tbody>
 										<tr>
-											<td><strong>Bold</strong></td>
-											<td>Add two asterisks (**) either side of your text (e.g. **bold**) to put it in bold.</td>
+											<td><strong>Gras</strong></td>
+											<td>Ajoutez deux astérisques (**) de part et d'autre de votre texte (par exemple **gras**) pour le mettre en gras.</td>
 										</tr>
 										<tr>
 											<td><i>Italic</i></td>
-											<td>Put an underscore (_) either side of your text (e.g. _italic_) to put it in italics.</td>
+											<td>Mettez un trait de soulignement (_) de part et d'autre de votre texte (par exemple _italic_) pour le mettre en italique..</td>
 										</tr>
 									</tbody>
 								</table>
@@ -935,12 +935,12 @@
 					<div class="card">
 						<div class="card-header" id="headingTwo">
 							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-								2. Random Rolls
+								2. Jets aléatoires
 							</button>
 						</div>
 						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 							<div class="card-body">
-								<p>You can add <strong>random dice rolls</strong> with a special shortcode. You can use any dice size.</p>
+								<p>Vous pouvez ajouter des <strong>jets de dés aléatoires</strong> avec un shortcode spécial. Vous pouvez utiliser n'importe quelle taille de dés.</p>
 								<table class="table table-default table-bordered">
 									<tbody>
 										<tr>
@@ -963,7 +963,7 @@
 						</div>
 						<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
 							<div class="card-body">
-								<p>When creating a quickstart monster, you can use <strong>shortcodes</strong> to automatically calculate and insert numbers into your text.</p>
+								<p>Lors de la création d'un monstre de démarrage rapide, vous pouvez utiliser des <strong>shortcodes</strong> pour calculer et insérer automatiquement des nombres dans votre texte.</p>
 								<table class="table table-default table-bordered">
 									<tbody>
 										<tr>
@@ -982,14 +982,14 @@
 						</div>
 						<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
 							<div class="card-body">
-								<p>You can use mathematical <strong>modifiers</strong> to your shortcodes to transform the final number. For example:</p>
+								<p>Vous pouvez utiliser des <strong>modificateurs</strong> à vos shortcodes pour transformer le nombre final. Par exemple :</p>
 								<table class="table table-default table-bordered">
 									<tbody>
 										<tr>
 											<td class="text-center">
-												<p style="margin-bottom: 0">[level * 2] = Monster Level x 2</p>
-												<p style="margin-bottom: 0">[damage + 4] = Attack Damage + 4</p>
-												<p style="margin-bottom: 0">[(hp / 3) + 10] = (Hit Points / 3) + 10</p>
+												<p style="margin-bottom: 0">[level * 2] = Niveau du monstre x 2</p>
+												<p style="margin-bottom: 0">[damage + 4] = Dégâts d'attaque + 4</p>
+												<p style="margin-bottom: 0">[(hp / 3) + 10] = (PV / 3) + 10</p>
 											</td>
 										</tr>
 									</tbody>
@@ -1000,19 +1000,19 @@
 					<div class="card">
 						<div class="card-header" id="headingFive">
 							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-								5. Shortcodes & Random Rolls
+								5. Shortcodes & Jets aléatoires
 							</button>
 						</div>
 						<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
 							<div class="card-body">
-								<p>You can also add <strong>random dice</strong> to your shortcodes to show both static <i>and</i> random dice values. For example:</p>
+								<p>Vous pouvez également ajouter des <strong>dés aléatoires</strong> à vos shortcodes pour afficher à la fois des valeurs statiques et des valeurs aléatoires des dés. Par exemple :</p>
 								<table class="table table-default table-bordered">
 									<tbody>
 										<tr>
 											<td class="text-center">
-												<p style="margin-bottom: 0">[damage, d8] = Attack Damage (shown in d8)</p>
-												<p style="margin-bottom: 0">[12 + str-mod, d20] = 12 + Strength Mod (shown in d20)</p>
-												<p style="margin-bottom: 0">[10 * level, d6] = 10 * Level (shown in d6)</p>
+												<p style="margin-bottom: 0">[damage, d8] = Dégâts d'attaque (montrés en d8)</p>
+												<p style="margin-bottom: 0">[12 + str-mod, d20] = 12 + Mod de Force (montrés en d20)</p>
+												<p style="margin-bottom: 0">[10 * level, d6] = 10 * Niveau (montrés en d6)</p>
 											</td>
 										</tr>
 									</tbody>
@@ -1036,7 +1036,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title">
-					<span class="card-icon fas fa-question"></span> Pick Traits
+					<span class="card-icon fas fa-question"></span> Sélectionner des traits
 				</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -1069,7 +1069,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">
-					<span class="fas fa-times"></span> Cancel
+					<span class="fas fa-times"></span> Annuler
 				</button>
 				<button type="button" class="btn btn-primary btn-confirm">
 					<span class="fas fa-check"></span> Ok
@@ -1083,26 +1083,18 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title">
-					<span class="card-icon fas fa-question"></span> Monster Method
+					<span class="card-icon fas fa-question"></span> Méthode pour les monstres
 				</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
-				<p>There are two ways to start creating a monster:</p>
+				<p>Il y a deux façons de commencer à créer un monstre :</p>
 				<ol>
-					<li><strong>Quickstart:</strong> Basic stats (attributes, saving throws, hit points, armor class, etc) are calculated automatically based on monster level, role, and rank.</li>
-					<li><strong>Manual:</strong> Input the core attributes yourself.</li>
+					<li><strong>Démarrage rapide:</strong> Les statistiques de base (attributs, archétypes, jets de sauvegarde, points de vie, défenses, etc.) sont calculées automatiquement en fonction du niveau du monstre, de son rôle et de son rang.</li>
+					<li><strong>Manuel:</strong> Saisissez vous-même les attributs de bases.</li>
 				</ol>
-				<div class="alert alert-default text-center">
-					<p>For a more in-depth guide on creating monsters, read <strong>Giffyglyph's Monster Maker (PDF)</strong>.</p>
-					<p>
-						<a href="https://giffyglyph.com/monstermaker" class="btn btn-secondary" target="_blank">
-							<span class="card-icon fas fa-book-open"></span> Read the PDF
-						</a>
-					</p>
-				</div>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-primary" data-dismiss="modal">
