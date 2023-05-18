@@ -49,12 +49,12 @@ class Blueprint {
       other: null,
     };
     this.abilities = {
-      str: 10,
-      dex: 10,
-      con: 10,
-      int: 10,
-      wis: 10,
-      cha: 10,
+      str: 3,
+      dex: 2,
+      con: 1,
+      int: 0,
+      wis: -1,
+      cha: -2,
       quickstart: [
         { ability: "str" },
         { ability: "dex" },
@@ -65,12 +65,12 @@ class Blueprint {
       ],
     };
     this.archetypes = {
-      fig: 10,
-      rog: 10,
-      exp: 10,
-      sag: 10,
-      art: 10,
-      dip: 10,
+      fig: 3,
+      rog: 2,
+      exp: 1,
+      sag: 0,
+      art: -1,
+      dip: -2,
       quickstart: [
         { archetype: "fig" },
         { archetype: "rog" },
@@ -93,14 +93,7 @@ class Blueprint {
       other: null,
     };
     this.languages = [];
-    this.challenge = {
-      rating: 1,
-      custom: {
-        rating: null,
-        proficiency: null,
-        xp: null,
-      },
-    };
+    this.xpValue = 50;
     this.traits = [];
     this.actions = [];
     this.reactions = [];
@@ -402,25 +395,9 @@ class Blueprint {
         custom: parseString(language.custom),
       };
     });
-    this.challenge = {
-      rating: options.challenge
-        ? parseString(options.challenge.rating)
-        : this.challenge.rating,
-      custom: {
-        rating:
-          options.challenge && options.challenge.custom
-            ? parseString(options.challenge.custom.rating)
-            : this.challenge.custom.rating,
-        proficiency:
-          options.challenge && options.challenge.custom
-            ? parseNumber(options.challenge.custom.proficiency)
-            : this.challenge.custom.proficiency,
-        xp:
-          options.challenge && options.challenge.custom
-            ? parseNumber(options.challenge.custom.xp)
-            : this.challenge.custom.xp,
-      },
-    };
+    this.xpValue = options.xpValue
+      ? parseNumber(options.xpValue)
+      : this.xpValue;
     this.traits = parseArray(options.traits, function (trait) {
       return {
         name: parseString(trait.name),
@@ -891,24 +868,12 @@ class Blueprint {
     this.languages = languages;
   }
 
-  getChallengeRating() {
-    return this.challenge.rating;
+  getXpValue() {
+    return this.xpValue;
   }
 
-  setChallengeRating(cr) {
-    this.challenge.rating = cr;
-  }
-
-  getChallengeCustomRating() {
-    return this.challenge.custom.rating;
-  }
-
-  getChallengeCustomProficiency() {
-    return this.challenge.custom.proficiency;
-  }
-
-  getChallengeCustomXp() {
-    return this.challenge.custom.xp;
+  setXpValue(xpValue) {
+    this.xpValue = xpValue;
   }
 
   getTraits() {

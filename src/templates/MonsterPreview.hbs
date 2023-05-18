@@ -24,7 +24,7 @@
 					</div>
 					{{#if display.quickstart}}
 						<div class="monster-quickstart">
-							<p>Niveau {{monster.description.level}} {{fmtFormatRole monster.description.role}}<br/> {{fmtFormatRank monster.description.rank}} <span class="solo-only">vs {{monster.description.players}} </span>({{fmtLocaleString monster.challenge.xp}} XP)</p>
+							<p>Niveau {{monster.description.level}} {{fmtFormatRole monster.description.role}}<br/> {{fmtFormatRank monster.description.rank}} <span class="solo-only">vs {{monster.description.players}} </span>({{calculateXpValue monster.description}} XP)</p>
 						</div>
 					{{/if}}
 				</div>
@@ -206,7 +206,7 @@
 							<p>
 								<span class="label">Challenge</span>
 								<span>
-									{{{monster.challenge.rating}}} {{#unless display.quickstart}}({{fmtLocaleString monster.challenge.xp}} XP){{/unless}}
+									{{{monster.challenge.combatLevel}}} {{#unless display.quickstart}}({{fmtLocaleString monster.challenge.xp}} XP){{/unless}}
 								</span>
 							</p>
 						</li>

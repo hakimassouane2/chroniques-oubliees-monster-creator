@@ -99,12 +99,6 @@ class PanelVault extends Component {
           title: "Rang",
         },
         {
-          data: "monster.challenge.rating",
-          className: "col-cr",
-          title: "CR",
-          type: "num",
-        },
-        {
           data: "monster.ac.value",
           className: "col-ac",
           title: "Déf.",

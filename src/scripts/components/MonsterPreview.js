@@ -76,9 +76,7 @@ class MonsterPreview extends Component {
       vulnerabilities: monster.getVulnerabilities().length > 0,
       immunities: monster.getImmunities().length > 0,
       conditions: monster.getConditions().length > 0,
-      challenge:
-        monster.getChallengeRating() != null ||
-        monster.getChallengeXp() != null,
+      xpValue: monster.getXpValue() != null,
       traits: monster.getTraits().length > 0,
       actions: monster.getActions().length > 0,
       reactions: monster.getReactions().length > 0,
@@ -108,7 +106,6 @@ class MonsterPreview extends Component {
       options.skills ||
       options.senses ||
       options.languages ||
-      options.challenge ||
       options.resistances ||
       options.vulnerabilities ||
       options.immunities ||

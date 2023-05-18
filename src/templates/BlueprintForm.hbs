@@ -32,7 +32,7 @@
 					</div>
 					<div class="form-group quickstart-only">
 						<label>Niveau</label>
-						<input type="number" class="form-control" name="description.level" placeholder="0" min="-3" max="30" {{{setValue blueprint.description.level}}}>
+						<input type="number" class="form-control" name="description.level" placeholder="0" min="1" max="20" {{{setValue blueprint.description.level}}}>
 					</div>
 					<div class="form-group quickstart-only">
 						<label>Rôle</label>
@@ -650,60 +650,46 @@
 			<div class="card-header">
 				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#blueprint-challenge" {{#if display.blueprint-challenge}}aria-expanded="true"{{/if}}>
 					<span class="fas fa-chevron-right"></span>
-					<span class="title">Challenge</span>
+					<span class="title">Niveau de combat</span>
 				</button>
 			</div>
 			<div id="blueprint-challenge" class="collapse {{#if display.blueprint-challenge}}show{{/if}}" data-parent="#accordion-blueprint">
 				<div class="card-body">
 					<div class="form-group">
 						<label>CR</label>
-						<select class="form-control custom-toggle" name="challenge.rating" id="monster-cr">
-							<option value="custom" {{selected blueprint.challenge.rating "custom"}}>Custom</option>
-							<option value="0" {{selected blueprint.challenge.rating "0"}}>0</option>
-							<option value="1/8" {{selected blueprint.challenge.rating "1/8"}}>1/8</option>
-							<option value="1/4" {{selected blueprint.challenge.rating "1/4"}}>1/4</option>
-							<option value="1/2" {{selected blueprint.challenge.rating "1/2"}}>1/2</option>
-							<option value="1" {{selectedDefault blueprint.challenge.rating "1"}}>1</option>
-							<option value="2" {{selected blueprint.challenge.rating "2"}}>2</option>
-							<option value="3" {{selected blueprint.challenge.rating "3"}}>3</option>
-							<option value="4" {{selected blueprint.challenge.rating "4"}}>4</option>
-							<option value="5" {{selected blueprint.challenge.rating "5"}}>5</option>
-							<option value="6" {{selected blueprint.challenge.rating "6"}}>6</option>
-							<option value="7" {{selected blueprint.challenge.rating "7"}}>7</option>
-							<option value="8" {{selected blueprint.challenge.rating "8"}}>8</option>
-							<option value="9" {{selected blueprint.challenge.rating "9"}}>9</option>
-							<option value="10" {{selected blueprint.challenge.rating "10"}}>10</option>
-							<option value="11" {{selected blueprint.challenge.rating "11"}}>11</option>
-							<option value="12" {{selected blueprint.challenge.rating "12"}}>12</option>
-							<option value="13" {{selected blueprint.challenge.rating "13"}}>13</option>
-							<option value="14" {{selected blueprint.challenge.rating "14"}}>14</option>
-							<option value="15" {{selected blueprint.challenge.rating "15"}}>15</option>
-							<option value="16" {{selected blueprint.challenge.rating "16"}}>16</option>
-							<option value="17" {{selected blueprint.challenge.rating "17"}}>17</option>
-							<option value="18" {{selected blueprint.challenge.rating "18"}}>18</option>
-							<option value="19" {{selected blueprint.challenge.rating "19"}}>19</option>
-							<option value="20" {{selected blueprint.challenge.rating "20"}}>20</option>
-							<option value="21" {{selected blueprint.challenge.rating "21"}}>21</option>
-							<option value="22" {{selected blueprint.challenge.rating "22"}}>22</option>
-							<option value="23" {{selected blueprint.challenge.rating "23"}}>23</option>
-							<option value="24" {{selected blueprint.challenge.rating "24"}}>24</option>
-							<option value="25" {{selected blueprint.challenge.rating "25"}}>25</option>
-							<option value="26" {{selected blueprint.challenge.rating "26"}}>26</option>
-							<option value="27" {{selected blueprint.challenge.rating "27"}}>27</option>
-							<option value="28" {{selected blueprint.challenge.rating "28"}}>28</option>
-							<option value="29" {{selected blueprint.challenge.rating "29"}}>29</option>
-							<option value="30" {{selected blueprint.challenge.rating "30"}}>30</option>
+						<select class="form-control custom-toggle" name="challenge.combatLevel" id="monster-cr">
+							<option value="custom" {{selected blueprint.challenge.combatLevel "custom"}}>Custom</option>
+							<option value="1" {{selectedDefault blueprint.challenge.combatLevel "1"}}>1</option>
+							<option value="2" {{selected blueprint.challenge.combatLevel "2"}}>2</option>
+							<option value="3" {{selected blueprint.challenge.combatLevel "3"}}>3</option>
+							<option value="4" {{selected blueprint.challenge.combatLevel "4"}}>4</option>
+							<option value="5" {{selected blueprint.challenge.combatLevel "5"}}>5</option>
+							<option value="6" {{selected blueprint.challenge.combatLevel "6"}}>6</option>
+							<option value="7" {{selected blueprint.challenge.combatLevel "7"}}>7</option>
+							<option value="8" {{selected blueprint.challenge.combatLevel "8"}}>8</option>
+							<option value="9" {{selected blueprint.challenge.combatLevel "9"}}>9</option>
+							<option value="10" {{selected blueprint.challenge.combatLevel "10"}}>10</option>
+							<option value="11" {{selected blueprint.challenge.combatLevel "11"}}>11</option>
+							<option value="12" {{selected blueprint.challenge.combatLevel "12"}}>12</option>
+							<option value="13" {{selected blueprint.challenge.combatLevel "13"}}>13</option>
+							<option value="14" {{selected blueprint.challenge.combatLevel "14"}}>14</option>
+							<option value="15" {{selected blueprint.challenge.combatLevel "15"}}>15</option>
+							<option value="16" {{selected blueprint.challenge.combatLevel "16"}}>16</option>
+							<option value="17" {{selected blueprint.challenge.combatLevel "17"}}>17</option>
+							<option value="18" {{selected blueprint.challenge.combatLevel "18"}}>18</option>
+							<option value="19" {{selected blueprint.challenge.combatLevel "19"}}>19</option>
+							<option value="20" {{selected blueprint.challenge.combatLevel "20"}}>20</option>
 						</select>
 					</div>
-					<div class="form-group custom" {{{customToggle blueprint.challenge.rating}}}>
+					<div class="form-group custom" {{{customToggle blueprint.challenge.combatLevel}}}>
 						<label>Custom CR</label>
-						<input type="text" class="form-control" name="challenge.custom.rating" placeholder="0" min="0" {{{setValue blueprint.challenge.custom.rating}}}>
+						<input type="text" class="form-control" name="challenge.custom.combatLevel" placeholder="0" min="0" {{{setValue blueprint.challenge.custom.combatLevel}}}>
 					</div>
-					<div class="form-group custom" {{{customToggle blueprint.challenge.rating}}}>
+					<div class="form-group custom" {{{customToggle blueprint.challenge.combatLevel}}}>
 						<label>Maîtrise</label>
 						<input type="number" class="form-control" name="challenge.custom.proficiency" placeholder="0" min="0" {{{setValue blueprint.challenge.custom.proficiency}}}>
 					</div>
-					<div class="form-group custom" {{{customToggle blueprint.challenge.rating}}}>
+					<div class="form-group custom" {{{customToggle blueprint.challenge.combatLevel}}}>
 						<label>XP</label>
 						<input type="number" class="form-control" name="challenge.custom.xp" placeholder="0" min="0" {{{setValue blueprint.challenge.custom.xp}}}>
 					</div>

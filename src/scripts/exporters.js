@@ -58,7 +58,7 @@ const Exporters = (function () {
           return x.type + " " + x.value;
         }),
       Languages: monster.getLanguages().filter((x) => x != "—"),
-      Challenge: monster.getChallengeRating(),
+      XpValue: monster.getXpValue(),
       Traits: monster.getTraits().map(function (x) {
         return {
           Name: x.name,
@@ -188,11 +188,8 @@ const Exporters = (function () {
           race: "",
           type: monster.getType(),
           environment: "",
-          cr: monster.getChallengeRating(),
+          cr: monster.getCombatLevel(),
           spellLevel: 0,
-          xp: {
-            value: monster.getChallengeXp(),
-          },
           source: "",
         },
         traits: {

@@ -7,19 +7,16 @@ import Storage from "./storage.js";
  */
 const Frankenstein = (function () {
   let data = {
-    challenges: null,
     roles: null,
     ranks: null,
   };
 
   /**
    * Initialises the entity.
-   * @param {object} challenges - A collection of challenge fragments.
    * @param {object} roles - A collection of monster role fragments.
    * @param {object} ranks - A collection of monster rank fragments.
    */
-  function initialise(challenges, roles, ranks) {
-    data.challenges = challenges;
+  function initialise(roles, ranks) {
     data.roles = roles;
     data.ranks = ranks;
   }
@@ -64,6 +61,7 @@ const Frankenstein = (function () {
       blueprint.getPlayers() == null ? 0 : blueprint.getPlayers()
     );
     monster.setIsQuickstart(blueprint.getMethod() == "quickstart");
+    monster.setXpValue(blueprint.getXpValue());
 
     // Set tags
     let tags = [];
@@ -201,36 +199,6 @@ const Frankenstein = (function () {
       monster["setArchetype" + field](archetype);
     });
 
-    // Set challenge
-    if (blueprint.getMethod() == "quickstart") {
-      monster.setChallengeRating(quickstarter.getChallengeRating());
-      monster.setChallengeProficiency(quickstarter.getProficiency());
-      monster.setChallengeXp(quickstarter.getXp());
-    } else {
-      if (blueprint.getChallengeRating() == "custom") {
-        monster.setChallengeRating(
-          blueprint.getChallengeCustomRating() == null
-            ? 0
-            : blueprint.getChallengeCustomRating()
-        );
-        monster.setChallengeProficiency(
-          blueprint.getChallengeCustomProficiency() == null
-            ? 0
-            : blueprint.getChallengeCustomProficiency()
-        );
-        monster.setChallengeXp(
-          blueprint.getChallengeCustomXp() == null
-            ? 0
-            : blueprint.getChallengeCustomXp()
-        );
-      } else {
-        let challenge = getChallenge(blueprint.getChallengeRating());
-        monster.setChallengeRating(challenge.getRating());
-        monster.setChallengeProficiency(challenge.getProficiency());
-        monster.setChallengeXp(challenge.getXp());
-      }
-    }
-
     // Set skills
     let skills = [];
     blueprint.getSkills().forEach(function (skill) {
@@ -275,7 +243,7 @@ const Frankenstein = (function () {
     );
     senses.push({
       type: "passive Perception",
-      value: 10 + getSkillModifier(monster, "perception"),
+      value: 10,
     });
     monster.setSenses(senses);
 
@@ -537,9 +505,7 @@ const Frankenstein = (function () {
       let quickstarter = new Quickstarter(monster.getLevel());
       quickstarter.setRole(data.roles[blueprint.getRole()]);
       quickstarter.setRank(data.ranks[blueprint.getRank()]);
-      monster.setChallengeRating(quickstarter.getChallengeRating());
-      monster.setChallengeProficiency(quickstarter.getProficiency());
-      monster.setChallengeXp(quickstarter.getXp());
+      monster.setXpValue(50 * monster.getLevel());
 
       monster.setAcValue(
         quickstarter.getAc() +
@@ -555,29 +521,7 @@ const Frankenstein = (function () {
         )
       );
     } else {
-      if (blueprint.getChallengeRating() == "custom") {
-        monster.setChallengeRating(
-          blueprint.getChallengeCustomRating() == null
-            ? 0
-            : blueprint.getChallengeCustomRating()
-        );
-        monster.setChallengeProficiency(
-          blueprint.getChallengeCustomProficiency() == null
-            ? 0
-            : blueprint.getChallengeCustomProficiency()
-        );
-        monster.setChallengeXp(
-          blueprint.getChallengeCustomXp() == null
-            ? 0
-            : blueprint.getChallengeCustomXp()
-        );
-      } else {
-        let challenge = getChallenge(blueprint.getChallengeRating());
-        monster.setChallengeRating(challenge.getRating());
-        monster.setChallengeProficiency(challenge.getProficiency());
-        monster.setChallengeXp(challenge.getXp());
-      }
-
+      monster.setXpValue(50 * monster.getLevel());
       monster.setAcValue(
         blueprint.getAcBase() == null ? "—" : blueprint.getAcBase()
       );
@@ -611,98 +555,6 @@ const Frankenstein = (function () {
     let field =
       "getArchetype" + archetype.charAt(0).toUpperCase() + archetype.slice(1);
     return monster[field]().modifier;
-  }
-
-  /**
-   * Gets a proficiency bonus from a monster.
-   * @param {monster} monster - A target monster.
-   * @param {string} proficiency - Proficient/Expertise or nothing.
-   * @return {number} The monster's proficiency bonus.
-   */
-  function getMonsterProficiencyBonus(monster, proficiency) {
-    switch (proficiency) {
-      case "proficient":
-        return monster.getChallengeProficiency();
-        break;
-      case "expertise":
-        return monster.getChallengeProficiency() * 2;
-        break;
-      default:
-        return 0;
-        break;
-    }
-  }
-
-  /**
-   * Gets the expected ability attribute for a specific skill.
-   * @param {string} skill - A target skill.
-   * @return {string} The expected ability (str/dex/con/int/wis/cha).
-   */
-  function getAbilityFromSkill(skill) {
-    switch (skill) {
-      case "athletics":
-        return "str";
-        break;
-      case "acrobatics":
-      case "sleight of hand":
-      case "stealth":
-        return "dex";
-        break;
-      case "arcana":
-      case "history":
-      case "investigation":
-      case "nature":
-      case "religion":
-        return "int";
-        break;
-      case "animal handling":
-      case "insight":
-      case "medicine":
-      case "survival":
-      case "perception":
-        return "wis";
-        break;
-      case "deception":
-      case "intimidation":
-      case "performance":
-      case "persuasion":
-        return "cha";
-        break;
-      default:
-        return null;
-        break;
-    }
-  }
-
-  /**
-   * Gets a monster's current skill modifier for a specific skill.
-   * @param {monster} monster - A target monster.
-   * @param {string} skill - A target skill.
-   * @return {number} The skill modifier.
-   */
-  function getSkillModifier(monster, skill) {
-    let skills = monster.getSkills();
-    let index = skills.findIndex((x) => x.name == skill);
-    if (index != -1) {
-      return skills[index].modifier;
-    } else {
-      let ability = getAbilityFromSkill(skill);
-      return getMonsterAbilityModifier(monster, ability);
-    }
-  }
-
-  /**
-   * Get a challenge based on the rating.
-   * @param {string} challenge - The challenge rating.
-   * @return {challenge} The challenge details.
-   */
-  function getChallenge(rating) {
-    let index = data.challenges.findIndex((x) => x.getRating() == rating);
-    if (index == -1) {
-      return new Challenge("—", 0, 0);
-    } else {
-      return data.challenges[index];
-    }
   }
 
   /**
@@ -828,12 +680,8 @@ const Frankenstein = (function () {
         /\bdip-score\b/g,
         monster.getArchetypeDip().score
       );
-      output = output.replace(
-        /\bproficiency\b/g,
-        monster.getChallengeProficiency()
-      );
-      output = output.replace(/\bxp\b/g, monster.getChallengeXp());
-      output = output.replace(/\bcr\b/g, monster.getChallengeRating());
+      output = output.replace(/\bxp\b/g, monster.getXpValue());
+      output = output.replace(/\bcr\b/g, monster.getCombatLevel());
 
       output = output.replace(
         /\bac\b/g,

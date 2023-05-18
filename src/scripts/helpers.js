@@ -49,6 +49,22 @@ const Helpers = (function () {
       return capitalise(text);
     });
 
+    Handlebars.registerHelper("calculateXpValue", function (description) {
+      const levelMap = [
+        50, 112, 175, 275, 450, 575, 725, 975, 1250, 1475, 1800, 2100, 2500,
+        2875, 3250, 3750, 4500, 5000, 5500, 6250,
+      ];
+      const rankMap = {
+        minion: 0.25,
+        standard: 1,
+        elite: 2,
+        solo: 4,
+      };
+      return Math.floor(
+        levelMap[description.level - 1] * rankMap[description.rank]
+      ).toString();
+    });
+
     Handlebars.registerHelper("fmtFormatRank", function (text) {
       let rankMap = {
         minion: "Sbire",

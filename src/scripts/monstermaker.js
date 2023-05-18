@@ -9,11 +9,7 @@ const MonsterMaker = (function () {
     // Initalise helpers and load stored data
     Helpers.initialise();
     Storage.load();
-    Frankenstein.initialise(
-      Storage.getChallenges(),
-      Storage.getRoles(),
-      Storage.getRanks()
-    );
+    Frankenstein.initialise(Storage.getRoles(), Storage.getRanks());
 
     // Create main app and render it
     let app = new TheApp({

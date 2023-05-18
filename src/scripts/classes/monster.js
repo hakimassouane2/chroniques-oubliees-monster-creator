@@ -57,11 +57,7 @@ class Monster {
     this.conditions = [];
     this.senses = [];
     this.languages = [];
-    this.challenge = {
-      rating: null,
-      proficiency: null,
-      xp: null,
-    };
+    this.xpValue = null;
     this.traits = [];
     this.actions = [];
     this.reactions = [];
@@ -405,28 +401,12 @@ class Monster {
     this.languages = languages;
   }
 
-  getChallengeRating() {
-    return this.challenge.rating;
+  getXpValue() {
+    return this.xpValue;
   }
 
-  setChallengeRating(rating) {
-    this.challenge.rating = rating;
-  }
-
-  getChallengeProficiency() {
-    return this.challenge.proficiency;
-  }
-
-  setChallengeProficiency(proficiency) {
-    this.challenge.proficiency = proficiency;
-  }
-
-  getChallengeXp() {
-    return this.challenge.xp;
-  }
-
-  setChallengeXp(xp) {
-    this.challenge.xp = xp;
+  setXpValue(xpValue) {
+    this.xpValue = xpValue;
   }
 
   getTraits() {
