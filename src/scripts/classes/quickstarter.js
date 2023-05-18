@@ -11,7 +11,6 @@ class Quickstarter {
       damage: 1,
       hp: 1,
       dc: 0,
-      xp: 1,
     };
     this.rank = {
       id: null,
@@ -20,7 +19,6 @@ class Quickstarter {
       damage: 1,
       hp: 1,
       dc: 0,
-      xp: 1,
     };
     this.proficiency = null;
     this.abilities = [];
@@ -40,18 +38,6 @@ class Quickstarter {
     let proficiency = Math.floor((level + 3) / 4) + 1;
     let ability = Math.floor(level / 4) + 3;
     let archetype = Math.floor(level / 4) + 3;
-    let player = {
-      dpr:
-        level > 0
-          ? Math.max(
-              (Math.ceil(level / 4) + ((level - 1) % 4) / 8) *
-                (4.5 + proficiency),
-              1
-            )
-          : 4 + level,
-      hp: level * (5 + Math.min(ability - 2, 5)) + 2,
-    };
-
     this.level = level;
     this.proficiency = proficiency;
     this.abilities = [
@@ -70,10 +56,10 @@ class Quickstarter {
       Math.floor(archetype * 0.3),
       Math.floor(archetype * 0.3 - 1),
     ];
-    this.ac = Math.ceil((ability + proficiency) * 0.8) + 10;
+    this.ac = Math.floor(12 + level / 4);
     this.attack = ability + proficiency - 2;
-    this.damage = Math.max(Math.ceil(player.hp / 4), 1);
-    this.hp = Math.max(Math.ceil(player.dpr * 4), 1);
+    this.damage = 2;
+    this.hp = 6;
     this.dc = Math.floor(ability * 0.66) + proficiency + 8;
     this.skillBonus = Math.floor(ability * 0.66);
     this.perception = null;
@@ -112,7 +98,7 @@ class Quickstarter {
   }
 
   getAc() {
-    return this.ac + this.role.ac + this.rank.ac;
+    return math.floor(this.ac + this.role.ac + this.rank.ac);
   }
 
   getAttack() {
@@ -127,7 +113,7 @@ class Quickstarter {
   }
 
   getHp() {
-    return Math.max(Math.ceil(this.hp * this.role.hp * this.rank.hp), 1);
+    return Math.max(Math.floor(this.hp * this.role.hp * this.rank.hp), 1);
   }
 
   getDcPrimary() {
