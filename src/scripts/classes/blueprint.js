@@ -20,7 +20,7 @@ class Blueprint {
     };
     this.tags = [];
     this.display = {
-      theme: "default",
+      theme: "giffyglyph",
       columns: 1,
       image: {
         url: null,

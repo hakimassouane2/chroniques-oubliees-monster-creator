@@ -96,7 +96,7 @@ const Storage = (function () {
   function getDefaultSettings() {
     return {
       theme: {
-        monster: "diamond",
+        monster: "giffyglyph",
       },
       defence: "disabled",
     };

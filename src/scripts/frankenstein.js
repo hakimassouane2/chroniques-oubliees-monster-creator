@@ -159,7 +159,7 @@ const Frankenstein = (function () {
           blueprint.getAbilityQuickstartRank(field.toLowerCase())
         );
         ability = {
-          score: modifier * 2 + 10,
+          score: modifier,
           modifier: modifier,
         };
       } else {
@@ -169,7 +169,7 @@ const Frankenstein = (function () {
             : blueprint["getAbility" + field]();
         ability = {
           score: score,
-          modifier: Math.floor((score - 10) / 2),
+          modifier: score,
         };
       }
       monster["setAbility" + field](ability);
@@ -183,7 +183,7 @@ const Frankenstein = (function () {
           blueprint.getArchetypeQuickstartRank(field.toLowerCase())
         );
         archetype = {
-          score: modifier * 2 + 10,
+          score: modifier,
           modifier: modifier,
         };
       } else {
@@ -193,7 +193,7 @@ const Frankenstein = (function () {
             : blueprint["getArchetype" + field]();
         archetype = {
           score: score,
-          modifier: Math.floor((score - 10) / 2),
+          modifier: score,
         };
       }
       monster["setArchetype" + field](archetype);

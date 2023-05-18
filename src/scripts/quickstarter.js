@@ -38,41 +38,15 @@ class Quickstarter {
 
     // Get calculated level details
     let proficiency = Math.floor((level + 3) / 4) + 1;
-    let ability = Math.floor(level / 4) + 3;
-    let archetype = Math.floor(level / 4) + 3;
-    let player = {
-      dpr:
-        level > 0
-          ? Math.max(
-              (Math.ceil(level / 4) + ((level - 1) % 4) / 8) *
-                (4.5 + proficiency),
-              1
-            )
-          : 4 + level,
-      hp: level * (5 + Math.min(ability - 2, 5)) + 2,
-    };
-
+    let ability = 0;
+    let archetype = 0;
     this.level = level;
     this.proficiency = proficiency;
-    this.abilities = [
-      ability,
-      Math.floor(ability * 0.75),
-      Math.floor(ability * 0.5),
-      Math.floor(ability * 0.4),
-      Math.floor(ability * 0.3),
-      Math.floor(ability * 0.3 - 1),
-    ];
-    this.archetypes = [
-      archetype,
-      Math.floor(archetype * 0.75),
-      Math.floor(archetype * 0.5),
-      Math.floor(archetype * 0.4),
-      Math.floor(archetype * 0.3),
-      Math.floor(archetype * 0.3 - 1),
-    ];
+    this.abilities = [3, 2, 1, 0, -1, -2];
+    this.archetypes = [3, 2, 1, 0, -1, -2];
     this.ac = Math.floor(12 + level / 4);
     this.attack = ability + proficiency - 2;
-    this.damage = Math.max(Math.ceil(player.hp / 4), 1);
+    this.damage = 2;
     this.hp = 6;
     this.dc = Math.floor(ability * 0.66) + proficiency + 8;
     this.skillBonus = Math.floor(ability * 0.66);
