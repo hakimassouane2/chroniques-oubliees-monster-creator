@@ -242,7 +242,7 @@ const Frankenstein = (function () {
       }
     );
     senses.push({
-      type: "passive Perception",
+      type: "Perception passive",
       value: 10,
     });
     monster.setSenses(senses);
