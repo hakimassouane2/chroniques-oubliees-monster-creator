@@ -35,7 +35,7 @@
 					{{#if display.armorClass}}
 						<li class="monster-ac">
 							<p>
-								<span class="label">Défenses</span>
+								<span class="label">Défense</span>
 								<span>
 									{{#if monster.ac.value}}{{monster.ac.value}} {{/if}}
 									{{#if monster.ac.type}}({{monster.ac.type}}){{/if}}
@@ -184,7 +184,7 @@
 					{{#if display.senses}}
 						<li class="monster-senses">
 							<p>
-								<span class="label">Senses</span>
+								<span class="label">Sens</span>
 								<span>{{fmtMonsterSenses monster.senses}}</span>
 							</p>
 						</li>
@@ -195,7 +195,7 @@
 								<span class="label">Langues</span>
 								<span>
 									{{#each monster.languages}}
-										{{fmtCapitalise this}}{{#unless @last}}, {{/unless}}
+										{{fmtFormatLanguage this}}{{#unless @last}}, {{/unless}}
 									{{/each}}
 								</span>
 							</p>

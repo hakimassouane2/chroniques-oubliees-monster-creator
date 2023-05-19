@@ -48,12 +48,12 @@ const Storage = (function () {
       {
         name: "Tranche",
         detail:
-          "_Attaque avec une arme de mêlée:_ [attack] contre Défenses. _Touché:_ [damage, d4] dégâts tranchants.",
+          "_Attaque au corps à corps avec une arme:_ [attack] contre Défenses. _Touché:_ [damage, d4] dégâts tranchants.",
       },
       {
         name: "Recul",
         detail:
-          "_Attaque avec une arme de mêlée:_ [dc-primary] vs Force. _Touché:_ la cible est repoussée jusqu'à 10 ft. de distance.",
+          "_Attaque au corps à corps avec une arme:_ [dc-primary] vs Force. _Touché:_ la cible est repoussée jusqu'à 10 ft. de distance.",
       },
     ]);
     return {
