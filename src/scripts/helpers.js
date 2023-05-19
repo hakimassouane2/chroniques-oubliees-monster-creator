@@ -49,6 +49,29 @@ const Helpers = (function () {
       return capitalise(text);
     });
 
+    Handlebars.registerHelper("fmtFormatLanguage", function (text) {
+      let languageMap = {
+        abyssal: "Abyssal",
+        celestial: "Céleste",
+        common: "Commun",
+        deepspeech: "Profond",
+        draconic: "Draconique",
+        dwarvish: "Nain",
+        elvish: "Elfique",
+        giant: "Géant",
+        gnomish: "Gnome",
+        goblin: "Gobelin",
+        halfling: "Halfelin",
+        infernal: "Infernal",
+        orc: "Orque",
+        primordial: "Primordial",
+        sylvan: "Sylvestre",
+        undercommon: "Commun des profondeurs",
+        all: "Toutes les langues",
+      };
+      return languageMap[text];
+    });
+
     Handlebars.registerHelper("calculateXpValue", function (description) {
       const levelMap = [
         50, 112, 175, 275, 450, 575, 725, 975, 1250, 1475, 1800, 2100, 2500,
