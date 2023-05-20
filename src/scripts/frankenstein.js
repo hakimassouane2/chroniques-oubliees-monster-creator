@@ -680,7 +680,7 @@ const Frankenstein = (function () {
         monster.getArchetypeDip().score
       );
       output = output.replace(/\bxp\b/g, monster.getXpValue());
-      output = output.replace(/\bcr\b/g, monster.getCombatLevel());
+      output = output.replace(/\bcr\b/g, monster.getLevel());
 
       output = output.replace(
         /\bac\b/g,
@@ -699,6 +699,7 @@ const Frankenstein = (function () {
       return output;
       // return "<span style='border-bottom: 1px dotted #00000066; margin: 0 0 -1px 0; border-radius: 0; cursor: pointer;' title='" + token.replace("'", "\'").replace(">", "\>") + "'>" + output + "</span>";
     } catch (e) {
+      console.error("error === ", e);
       return token;
       // return "<span style='border-bottom: 1px dotted #b01b11; margin: 0 0 -1px 0; border-radius: 0; cursor: pointer;' title='Invalid shortcode'>" + token + "</span>";
     }
