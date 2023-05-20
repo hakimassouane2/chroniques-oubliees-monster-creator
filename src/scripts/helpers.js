@@ -93,7 +93,7 @@ const Helpers = (function () {
 
     Handlebars.registerHelper("fmtFormatHpInRoll", function (text) {
       const number = parseInt(text);
-      if (number <= 3) {
+      if (number <= 3 || text === "—") {
         return "";
       }
 
