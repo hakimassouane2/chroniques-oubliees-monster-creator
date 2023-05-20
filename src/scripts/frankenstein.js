@@ -127,7 +127,6 @@ const Frankenstein = (function () {
       monster.setHpAverage(
         blueprint.getHpAverage() == null ? "—" : blueprint.getHpAverage()
       );
-      monster.setHpRoll(blueprint.getHpRoll());
     }
 
     // Set speeds

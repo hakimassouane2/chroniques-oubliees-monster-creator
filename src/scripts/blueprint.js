@@ -599,14 +599,6 @@ class Blueprint {
     this.hp.modifier = modifier;
   }
 
-  getHpRoll() {
-    return this.hp.roll;
-  }
-
-  setHpRoll(roll) {
-    this.hp.roll = roll;
-  }
-
   getDamageModifier() {
     return this.damage.modifier;
   }

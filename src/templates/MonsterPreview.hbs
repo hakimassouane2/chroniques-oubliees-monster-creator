@@ -48,8 +48,7 @@
 							<p>
 								<span class="label">Points de vie</span>
 								<span>
-									{{#if monster.hp.average}}{{monster.hp.average}} {{/if}}
-									{{#if monster.hp.roll}}({{monster.hp.roll}}){{/if}}
+									{{#if monster.hp.average}}{{monster.hp.average}}{{fmtFormatHpInRoll monster.hp.average}} {{/if}}
 								</span>
 							</p>
 						</li>

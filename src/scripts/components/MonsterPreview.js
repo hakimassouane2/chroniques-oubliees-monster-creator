@@ -67,7 +67,7 @@ class MonsterPreview extends Component {
         monster.getTags().length > 0 ||
         monster.getAlignment() != null,
       armorClass: monster.getAcValue() != null || monster.getAcType() != null,
-      hitPoints: monster.getHpAverage() != null || monster.getHpRoll() != null,
+      hitPoints: monster.getHpAverage() != null,
       speeds: monster.getSpeeds().length > 0,
       skills: monster.getSkills().length > 0,
       senses: monster.getSenses().length > 0,

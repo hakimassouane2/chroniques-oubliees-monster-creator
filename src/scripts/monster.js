@@ -224,14 +224,6 @@ class Monster {
     this.hp.average = hpAverage;
   }
 
-  getHpRoll() {
-    return this.hp.roll;
-  }
-
-  setHpRoll(hpRoll) {
-    this.hp.roll = hpRoll;
-  }
-
   getSpeeds() {
     return this.speeds;
   }

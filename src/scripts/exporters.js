@@ -11,7 +11,6 @@ const Exporters = (function () {
       Type: monster.getType(),
       HP: {
         Value: monster.getHpAverage(),
-        Notes: monster.getHpRoll() == null ? "" : monster.getHpRoll(),
       },
       AC: {
         Value: monster.getAcValue(),

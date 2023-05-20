@@ -91,6 +91,34 @@ const Helpers = (function () {
       return conditionMap[text];
     });
 
+    Handlebars.registerHelper("fmtFormatHpInRoll", function (text) {
+      const number = parseInt(text);
+      if (number <= 3) {
+        return "";
+      }
+
+      const diceTypes = [4, 6, 8, 10, 12, 20];
+      let remainingNumber = number;
+      const diceCounts = [];
+
+      // Iterate through dice types in descending order
+      for (let i = diceTypes.length - 1; i >= 0; i--) {
+        const diceType = diceTypes[i];
+        const diceCount = Math.floor(remainingNumber / diceType);
+
+        if (diceCount > 0) {
+          diceCounts.push(`${diceCount}d${diceType}`);
+          remainingNumber -= diceCount * diceType;
+        }
+      }
+
+      if (remainingNumber > 0) {
+        diceCounts.push(`${remainingNumber}`);
+      }
+
+      return ` (${diceCounts.join(" + ")})`;
+    });
+
     Handlebars.registerHelper("fmtFormatLanguage", function (text) {
       let languageMap = {
         abyssal: "Abyssal",
