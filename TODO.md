@@ -9,13 +9,15 @@
 - Change logo in header to LVDD logo ✅
 - Change Font-icon ✅
 - Handle Archetype in monster maker ✅
-- Create quete rapide monster template
-- Add new subclasses of classes of monsters
-- Do tables of calculations for quete rapide monsters
+- Create quete rapide monster template ✅
+- Add new subclasses of classes of monsters ✅
+- Do tables of calculations for quete rapide monsters ✅
+- Fixer les shortcodes
+- Make adding premade traits available for manual monsters
+- Find a way to handle stats with scaling monsters
 - Make a new theme to fit Giffyglyph monster maker PDF v4.0
-- Switch everything from JS / Gulp / Handlebars and Jquery to a frontend and backend application
-- Host everything on the internet
-- Create premade Actions and Reactions
+- Host everything on the internet (github pages ?)
+- Translate all premade Actions and Reactions in french
 - Add new giffyglyph conditions to the condition list
 - Add basic compétences handling for monster
 -
