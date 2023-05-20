@@ -49,6 +49,48 @@ const Helpers = (function () {
       return capitalise(text);
     });
 
+    Handlebars.registerHelper("fmtFormatDamages", function (text) {
+      let damageMap = {
+        acid: "Acide",
+        bludgeoning: "Contondant",
+        cold: "Froid",
+        fire: "Feu",
+        force: "Force",
+        lightning: "Foudre",
+        necrotic: "Nécrotique",
+        piercing: "Perforant",
+        poison: "Poison",
+        psychic: "Psychique",
+        radiant: "Radieux",
+        slashing: "Tranchant",
+        thunder: "Tonnerre",
+      };
+      return damageMap[text];
+    });
+
+    Handlebars.registerHelper("fmtFormatConditions", function (text) {
+      let conditionMap = {
+        blinded: "Aveuglé",
+        charmed: "Charmé",
+        deafened: "Assourdi",
+        frightened: "Effrayé",
+        grappled: "Agrippé",
+        incapacitated: "Incapacité",
+        invisible: "Invisible",
+        paralyzed: "Paralysé",
+        petrified: "Pétrifié",
+        poisoned: "Empoisonné",
+        prone: "À terre",
+        restrained: "Entravé",
+        stunned: "Étourdi",
+        exhaustion: "Épuisé",
+        fatigued: "Fatigué",
+        unconscious: "Inconscient",
+      };
+
+      return conditionMap[text];
+    });
+
     Handlebars.registerHelper("fmtFormatLanguage", function (text) {
       let languageMap = {
         abyssal: "Abyssal",
@@ -154,13 +196,20 @@ const Helpers = (function () {
 
     Handlebars.registerHelper("fmtMonsterSenses", function (senses) {
       let output = "";
+      let sensMap = {
+        blindsight: "Vision aveugle",
+        darkvision: "Vision dans le noir",
+        tremorsense: "Sens du tremblement",
+        truesight: "Vision Véritable",
+        "Perception passive": "Perception passive",
+      };
       senses.forEach(function (sense, index) {
         switch (sense.type) {
           case "other":
             output += sense.value;
             break;
           default:
-            output += sense.type + " " + sense.value;
+            output += sensMap[sense.type] + " " + sense.value;
             break;
         }
         if (index < senses.length - 1) {

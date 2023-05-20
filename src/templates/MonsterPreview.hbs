@@ -121,7 +121,7 @@
 			{{#if display.stats}}
 				<hr/>
 				<ul class="monster-stats">
-					{{#if display.skills}}
+					{{!-- {{#if display.skills}}
 						<li class="monster-skills">
 							<p>
 								<span class="label">Compétences</span>
@@ -132,14 +132,14 @@
 								</span>
 							</p>
 						</li>
-					{{/if}}
+					{{/if}} --}}
 					{{#if display.vulnerabilities}}
 						<li class="monster-vulnerabilities">
 							<p>
-								<span class="label">Damage Vulnerabilities</span>
+								<span class="label">Vulnérables	 aux dégâts</span>
 								<span>
 									{{#each monster.vulnerabilities}}
-										{{this}}{{#unless @last}}, {{/unless}}
+										{{fmtFormatDamages this}}{{#unless @last}}, {{/unless}}
 									{{/each}}
 								</span>
 							</p>
@@ -148,10 +148,10 @@
 					{{#if display.resistances}}
 						<li class="monster-resistances">
 							<p>
-								<span class="label">Damage Resistances</span>
+								<span class="label">Résistances aux dégâts</span>
 								<span>
 									{{#each monster.resistances}}
-										{{this}}{{#unless @last}}, {{/unless}}
+										{{fmtFormatDamages this}}{{#unless @last}}, {{/unless}}
 									{{/each}}
 								</span>
 							</p>
@@ -160,10 +160,10 @@
 					{{#if display.immunities}}
 						<li class="monster-immunities">
 							<p>
-								<span class="label">Damage Immunities</span>
+								<span class="label">Immunités aux dégâts</span>
 								<span>
 									{{#each monster.immunities}}
-										{{this}}{{#unless @last}}, {{/unless}}
+										{{fmtFormatDamages this}}{{#unless @last}}, {{/unless}}
 									{{/each}}
 								</span>
 							</p>
@@ -172,10 +172,10 @@
 					{{#if display.conditions}}
 						<li class="monster-conditions">
 							<p>
-								<span class="label">Condition Immunities</span>
+								<span class="label">Immunités aux états</span>
 								<span>
 									{{#each monster.conditions}}
-										{{this}}{{#unless @last}}, {{/unless}}
+										{{fmtFormatConditions this}}{{#unless @last}}, {{/unless}}
 									{{/each}}
 								</span>
 							</p>
