@@ -16,8 +16,8 @@
 - Switch everything from JS / Gulp / Handlebars and Jquery to a frontend and backend application
 - Host everything on the internet
 - Create premade Actions and Reactions
--
--
+- Add new giffyglyph conditions to the condition list
+- Add basic compétences handling for monster
 -
 -
 -
