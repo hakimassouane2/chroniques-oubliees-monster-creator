@@ -112,16 +112,6 @@ gulp.task(
   )
 );
 
-/**
- * Push build to gh-pages
- */
-gulp.task(
-  "deploy",
-  gulp.series("build", function () {
-    return gulp.src("./dist/**/*").pipe(deploy());
-  })
-);
-
 /*
  * Watch folders for any changes.
  */
@@ -154,4 +144,18 @@ gulp.task(
     }
   )
 );
+
+/**
+ * Build and watch for changes.
+ */
 gulp.task("build-and-watch", gulp.series("build", "watch"));
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task(
+  "deploy",
+  gulp.series("build", function () {
+    return gulp.src("./dist/**/*").pipe(deploy());
+  })
+);
