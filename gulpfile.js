@@ -1,6 +1,7 @@
 "use strict";
 
 let gulp = require("gulp");
+let deploy = require("gulp-gh-pages");
 let path = require("path");
 let using = require("gulp-using");
 let app = require("./package.json");
@@ -109,6 +110,16 @@ gulp.task(
     },
     "delete-templates"
   )
+);
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task(
+  "deploy",
+  gulp.series("build", function () {
+    return gulp.src("./dist/**/*").pipe(deploy());
+  })
 );
 
 /*
