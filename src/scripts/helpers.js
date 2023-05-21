@@ -288,6 +288,18 @@ const Helpers = (function () {
       : null;
   }
 
+  function formatRoleName(text) {
+    let roleMap = {
+      controller: "Contrôleur",
+      defender: "Défenseur",
+      lurker: "Rôdeur",
+      skirmisher: "Éclaireur",
+      striker: "Assaillant",
+      supporter: "Soutien",
+    };
+    return roleMap[text] || capitalise(text);
+  }
+
   function groupBy(xs, f) {
     return xs.reduce(
       (r, v, i, a, k = f(v)) => ((r[k] || (r[k] = [])).push(v), r),
@@ -408,6 +420,7 @@ const Helpers = (function () {
   return {
     initialise: initialise,
     capitalise: capitalise,
+    formatRoleName: formatRoleName,
     sanitiseFilename: sanitiseFilename,
     dispatchEvent: dispatchEvent,
     formatMonsterDescription: formatMonsterDescription,

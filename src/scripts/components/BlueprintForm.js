@@ -175,7 +175,7 @@ class BlueprintForm extends Component {
             $("#blueprint-trait .card-body").append(
               Handlebars.templates["BlueprintFormTraitAction"]({
                 name: trait.role
-                  ? "(" + Helpers.capitalise(trait.role) + ") " + trait.name
+                  ? "(" + Helpers.formatRoleName(trait.role) + ") " + trait.name
                   : trait.name,
                 detail: trait.description,
               })
