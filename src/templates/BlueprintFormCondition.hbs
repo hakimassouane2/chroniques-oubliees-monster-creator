@@ -3,23 +3,40 @@
 	<div class="form-group">
 		<label>Condition</label>
 		<select class="form-control custom-toggle" data-name="type">
-			<option value="grappled" {{selectedDefault type "grappled"}}>Agrippé</option>
+			<option value="feeble" {{selectedDefault type "feeble"}}>Affaibli</option>
+			<option value="starving" {{selected type "starving"}}>Affamé</option>
+			<option value="grappled" {{selected type "grappled"}}>Agrippé</option>
 			<option value="deafened" {{selected type "deafened"}}>Assourdi</option>
 			<option value="prone" {{selected type "prone"}}>À terre</option>
 			<option value="blinded" {{selected type "blinded"}}>Aveuglé</option>
+			<option value="banished" {{selected type "banished"}}>Banni</option>
 			<option value="charmed" {{selected type "charmed"}}>Charmé</option>
+			<option value="dazed" {{selected type "dazed"}}>Confus</option>
 			<option value="custom" {{selected type "custom"}}>Custom</option>
+			<option value="decaying" {{selected type "decaying"}}>Décomposition</option>
+			<option value="dehydrated" {{selected type "dehydrated"}}>Déshydraté</option>
+			<option value="disoriented" {{selected type "disoriented"}}>Désorienté</option>
 			<option value="frightened" {{selected type "frightened"}}>Effrayé</option>
 			<option value="poisoned" {{selected type "poisoned"}}>Empoisonné</option>
 			<option value="restrained" {{selected type "restrained"}}>Entravé</option>
+			<option value="swarmed" {{selected type "swarmed"}}>Essaimé</option>
 			<option value="exhaustion" {{selected type "exhaustion"}}>Épuisement</option>
 			<option value="stunned" {{selected type "stunned"}}>Étourdi</option>
+			<option value="exposed" {{selected type "exposed"}}>Exposé</option>
 			<option value="fatigued" {{selected type "fatigued"}}>Fatigué</option>
-			<option value="incapacitated" {{selected type "incapacitated"}}>Incapable d'agir / Neutralisé</option>
+			<option value="incapacitated" {{selected type "incapacitated"}}>Incapable d'agir</option>
 			<option value="unconscious" {{selected type "unconscious"}}>Inconscient</option>
 			<option value="invisible" {{selected type "invisible"}}>Invisible</option>
+			<option value="bound" {{selected type "bound"}}>Lié</option>
+			<option value="cursed" {{selected type "cursed"}}>Maudit</option>
 			<option value="paralyzed" {{selected type "paralyzed"}}>Paralysé</option>
+			<option value="stinking" {{selected type "stinking"}}>Puant</option>
 			<option value="petrified" {{selected type "petrified"}}>Pétrifié</option>
+			<option value="slowed" {{selected type "slowed"}}>Ralenti</option>
+			<option value="silenced" {{selected type "silenced"}}>Réduit au silence</option>
+			<option value="bleeding" {{selected type "bleeding"}}>Saignement</option>
+			<option value="transformed" {{selected type "transformed"}}>Transformé</option>
+			<option value="vulnerable" {{selected type "vulnerable"}}>Vulnérable</option>
 		</select>
 	</div>
 	<div class="form-group custom" {{{customToggle type}}}>

@@ -70,25 +70,43 @@ const Helpers = (function () {
 
     Handlebars.registerHelper("fmtFormatConditions", function (text) {
       let conditionMap = {
-        blinded: "Aveuglé",
-        charmed: "Charmé",
-        deafened: "Assourdi",
-        frightened: "Effrayé",
+        feeble: "Affaibli",
+        starving: "Affamé",
         grappled: "Agrippé",
-        incapacitated: "Incapacité",
-        invisible: "Invisible",
-        paralyzed: "Paralysé",
-        petrified: "Pétrifié",
-        poisoned: "Empoisonné",
+        deafened: "Assourdi",
         prone: "À terre",
+        blinded: "Aveuglé",
+        banished: "Banni",
+        charmed: "Charmé",
+        dazed: "Confus",
+        custom: "Custom",
+        decaying: "Décomposition",
+        dehydrated: "Déshydraté",
+        disoriented: "Désorienté",
+        frightened: "Effrayé",
+        poisoned: "Empoisonné",
         restrained: "Entravé",
+        swarmed: "Essaimé",
+        exhaustion: "Épuisement",
         stunned: "Étourdi",
-        exhaustion: "Épuisé",
+        exposed: "Exposé",
         fatigued: "Fatigué",
+        incapacitated: "Incapable d'agir",
         unconscious: "Inconscient",
+        invisible: "Invisible",
+        bound: "Lié",
+        cursed: "Maudit",
+        paralyzed: "Paralysé",
+        stinking: "Puant",
+        petrified: "Pétrifié",
+        slowed: "Ralenti",
+        silenced: "Réduit au silence",
+        bleeding: "Saignement",
+        transformed: "Transformé",
+        vulnerable: "Vulnérable",
       };
 
-      return conditionMap[text];
+      return conditionMap[text] ? conditionMap[text] : capitalise(text);
     });
 
     Handlebars.registerHelper("fmtFormatHpInRoll", function (text) {
