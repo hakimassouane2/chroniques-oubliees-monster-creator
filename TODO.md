@@ -16,10 +16,10 @@
 - Host everything on the internet (github pages ?) ✅
 - Add new giffyglyph conditions to the condition list ✅
 - Add a version indicator to check that the hosting on github pages is always at the correct version when checking it ✅
+- Translate all premade Actions and Reactions in french ✅
 - Make adding premade traits available for manual monsters
 - Find a way to handle stats with scaling monsters
 - Make a new theme to fit Giffyglyph monster maker PDF v4.0
-- Translate all premade Actions and Reactions in french
 - Add basic compétences handling for monster
 -
 -
