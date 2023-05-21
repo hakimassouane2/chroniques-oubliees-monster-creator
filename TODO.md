@@ -12,11 +12,12 @@
 - Create quete rapide monster template ✅
 - Add new subclasses of classes of monsters ✅
 - Do tables of calculations for quete rapide monsters ✅
-- Fixer les shortcodes
+- Fix shortcodes ✅
+- Host everything on the internet (github pages ?) ✅
+- Add a version indicator to check that the hosting on github pages is always at the correct version when checking it
 - Make adding premade traits available for manual monsters
 - Find a way to handle stats with scaling monsters
 - Make a new theme to fit Giffyglyph monster maker PDF v4.0
-- Host everything on the internet (github pages ?)
 - Translate all premade Actions and Reactions in french
 - Add new giffyglyph conditions to the condition list
 - Add basic compétences handling for monster
